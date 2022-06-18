@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  height: 1500px;
+}
+
+/** navbar **/
+nav {
+  background-color: #202020;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 1px 1px 3px grey;
+  position: fixed;
+}
+a.logo {
+  display: flex;
+  text-decoration: none;
+  margin-top: 5px;
+}
+nav .logo img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px #444;
+}
+nav .logo h4 {
+  color: white;
+  padding-left: 10px;
+  line-height: 41px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 25%;
+  justify-content: space-between;
+  line-height: 50px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+nav ul li a:hover {
+  color: #0077ff;
+  border-bottom: 0.2rem solid #0077ff;
+}
+
+.menu-toggle {
+  margin-top: 10px;
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+.menu-toggle input {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  background-color: white;
+  border-radius: 1px;
+  transition: 0.5s;
+}
+
+/* hamburger menu animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* responsive break*/
+
+/* tablet */
+@media screen and (max-width: 968px) {
+  nav ul {
+    width: 40%;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 568px) {
+  nav {
+    bottom: 0;
+  }
+  ul li {
+    width: 50%;
+    text-align: center;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 30vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #202020;
+    transform: translateY(-80%);
+    opacity: 0;
+    transition: 0.2s;
+    border-radius: 20px;
+    box-shadow: 0 0 5px#202020;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-top: 15px;
+  }
+  nav ul.slide {
+    transform: translateY(-90%);
+    opacity: 1;
+  }
+}
+/* Responsive end */
+/** Navbar end **/
