@@ -42,10 +42,13 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: aliceblue;
+  transition: 0.2s;
 }
+nav ul li.active a,
 nav ul li a:hover {
   color: #0077ff;
   border-bottom: 0.2rem solid #0077ff;
+  padding: 0.5rem 0;
 }
 
 .menu-toggle {
@@ -92,7 +95,7 @@ nav ul li a:hover {
   transform: scale(0);
 }
 
-/* responsive break*/
+/* responsive*/
 
 /* tablet */
 @media screen and (max-width: 968px) {
