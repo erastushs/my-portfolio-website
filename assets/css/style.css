@@ -4,7 +4,6 @@
 }
 body {
   font-family: "Outfit", sans-serif;
-  height: 1500px;
 }
 
 /** navbar **/
@@ -44,7 +43,7 @@ nav ul li a {
   color: aliceblue;
   transition: 0.2s;
 }
-nav ul li.active a,
+nav ul li a.active,
 nav ul li a:hover {
   color: #0077ff;
   border-bottom: 0.2rem solid #0077ff;
@@ -141,3 +140,24 @@ nav ul li a:hover {
 }
 /* Responsive end */
 /** Navbar end **/
+
+section {
+  min-height: 100vh;
+  display: flex;
+}
+
+section:nth-child(odd) {
+  background-color: aliceblue;
+}
+/** Home start**/
+
+/** Home end**/
+.test {
+  align-items: center;
+  justify-content: center;
+  font-size: 7em;
+  color: #4e4e4e;
+  font-weight: bolder;
+  padding-bottom: 70px;
+  text-transform: uppercase;
+}
