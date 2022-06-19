@@ -11,6 +11,16 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+html::-webkit-scrollbar-track {
+  background: #25273d;
+}
+html::-webkit-scrollbar-thumb {
+  background: #201393;
+}
+
 /** navbar **/
 nav {
   background-color: #202020;
