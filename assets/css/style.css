@@ -1,6 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.2s linear;
 }
 body {
   font-family: "Outfit", sans-serif;
@@ -13,8 +18,9 @@ nav {
   width: 100%;
   justify-content: space-around;
   padding: 10px 0;
-  box-shadow: 1px 1px 3px grey;
+  box-shadow: 1px 1px 3px #2a2a2a;
   position: fixed;
+  z-index: 100;
 }
 a.logo {
   display: flex;
@@ -143,13 +149,149 @@ nav ul li a:hover {
 
 section {
   min-height: 100vh;
-  display: flex;
+  padding: 5rem 16%;
 }
 
 section:nth-child(odd) {
-  background-color: aliceblue;
+  background-color: #202020;
+}
+section:nth-child(even) {
+  background-color: #2b2b2b;
 }
 /** Home start**/
+.home {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.home div.foto {
+  flex: 1 1 40rem;
+  z-index: 1;
+}
+div.foto img {
+  width: 35%;
+  margin-left: 33rem;
+  margin-top: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+div.foto img:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.home div.content {
+  position: relative;
+  width: 30%;
+  flex: 1 1 40rem;
+  padding-top: 1rem;
+  z-index: 1;
+}
+div.content h2 {
+  position: absolute;
+  color: white;
+  font-weight: 800;
+  font-size: 3rem;
+  margin-top: -20rem;
+}
+div.content p {
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  margin-top: -12rem;
+}
+div.content p span {
+  color: #0077ff;
+}
+div.content a {
+  position: absolute;
+  margin-top: -8rem;
+  position: absolute;
+  line-height: 0;
+  padding: 1.3rem 2.4rem;
+  border-radius: 4em;
+  transition: 0.5s;
+  box-shadow: 0px 5px 18px rgba(32, 32, 32, 0.6);
+}
+div.content a span {
+  font-size: 1rem;
+}
+div.content a.email {
+  color: black;
+  background: white;
+}
+div.content a.cv {
+  color: #fff;
+  background: #4e4e4e;
+  margin-left: 9.5rem;
+}
+div.content a:hover {
+  transform: scale(1.1);
+}
+
+/* responsive*/
+
+/* tablet */
+@media screen and (max-width: 968px) {
+  div.foto img {
+    width: 60%;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-bottom: -10rem;
+  }
+  div.content {
+    margin-top: 30rem;
+    margin-left: 8rem;
+  }
+  div.content h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  div.content p {
+    margin-top: -15rem;
+    margin-left: -2rem;
+    font-size: 1rem;
+  }
+  div.content a {
+    margin-left: -3rem;
+    margin-top: -13rem;
+    padding: 1rem;
+  }
+  div.content a.cv {
+    margin-left: 6rem;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 568px) {
+  .home {
+    height: 10vh;
+  }
+  div.foto img {
+    width: 100%;
+    margin: 2rem 0rem -10rem;
+  }
+  div.content {
+    margin-left: 3rem;
+    margin-top: 30rem;
+    margin-bottom: -10rem;
+  }
+  div.content h2 {
+    font-size: 2rem;
+  }
+  div.content p {
+    margin-top: -15rem;
+    font-size: 1rem;
+  }
+  div.content a {
+    margin-top: -13rem;
+    padding: 1rem;
+  }
+  div.content a.cv {
+    margin-left: 5rem;
+  }
+}
 
 /** Home end**/
 .test {
