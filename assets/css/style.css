@@ -12,13 +12,14 @@ body {
 }
 
 html::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 0.6rem;
 }
 html::-webkit-scrollbar-track {
-  background: #25273d;
+  background: #2b2b2b;
 }
 html::-webkit-scrollbar-thumb {
-  background: #201393;
+  border-radius: 5px;
+  background: grey;
 }
 
 /** navbar **/
@@ -175,6 +176,13 @@ section:nth-child(even) {
   flex-wrap: wrap;
   align-items: center;
 }
+.home #particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
 .home div.foto {
   flex: 1 1 40rem;
   z-index: 1;
@@ -238,6 +246,7 @@ div.content a.cv {
 }
 div.content a:hover {
   transform: scale(1.1);
+  filter: brightness(80%);
 }
 
 /* responsive*/
