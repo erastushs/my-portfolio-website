@@ -128,6 +128,7 @@ nav ul li a:hover {
   ul li {
     width: 50%;
     text-align: center;
+    z-index: -10;
   }
   nav ul {
     position: absolute;
@@ -139,11 +140,12 @@ nav ul li a:hover {
     flex-wrap: wrap;
     align-items: center;
     background-color: #202020;
-    transform: translateY(-80%);
+    transform: translateY(30%);
     opacity: 0;
-    transition: 0.2s;
+    transition: transform 0.2s linear, opacity 0.3s linear;
     border-radius: 20px;
     box-shadow: 0 0 5px#202020;
+    z-index: -1;
   }
 
   .menu-toggle {
@@ -187,7 +189,7 @@ section:nth-child(even) {
   flex: 1 1 40rem;
   z-index: 1;
 }
-div.foto img {
+.home div.foto img {
   width: 35%;
   margin-left: 33rem;
   margin-top: 4rem;
@@ -195,7 +197,7 @@ div.foto img {
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
-div.foto img:hover {
+.home div.foto img:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -206,23 +208,24 @@ div.foto img:hover {
   padding-top: 1rem;
   z-index: 1;
 }
-div.content h2 {
+.home div.content h2 {
   position: absolute;
   color: white;
   font-weight: 800;
   font-size: 3rem;
   margin-top: -20rem;
 }
-div.content p {
+.home div.content p {
   position: absolute;
   color: white;
   font-size: 1.5rem;
   margin-top: -12rem;
 }
-div.content p span {
+.home div.content p span {
   color: #0077ff;
 }
-div.content a {
+.home div.content a {
+  font-weight: 600;
   position: absolute;
   margin-top: -8rem;
   position: absolute;
@@ -232,19 +235,19 @@ div.content a {
   transition: 0.5s;
   box-shadow: 0px 5px 18px rgba(32, 32, 32, 0.6);
 }
-div.content a span {
+.home div.content a span {
   font-size: 1rem;
 }
-div.content a.email {
+.home div.content a.email {
   color: black;
   background: white;
 }
-div.content a.cv {
+.home div.content a.cv {
   color: #fff;
   background: #4e4e4e;
   margin-left: 9.5rem;
 }
-div.content a:hover {
+.home div.content a:hover {
   transform: scale(1.1);
   filter: brightness(80%);
 }
@@ -253,31 +256,31 @@ div.content a:hover {
 
 /* tablet */
 @media screen and (max-width: 968px) {
-  div.foto img {
-    width: 60%;
+  .home div.foto img {
+    width: 50%;
     margin-top: 2rem;
-    margin-left: 5rem;
+    margin-left: 20%;
     margin-bottom: -10rem;
   }
-  div.content {
+  .home div.content {
     margin-top: 30rem;
-    margin-left: 8rem;
+    margin-left: 30%;
   }
-  div.content h2 {
+  .home div.content h2 {
     text-align: center;
     font-size: 2rem;
   }
-  div.content p {
+  .home div.content p {
     margin-top: -15rem;
     margin-left: -2rem;
     font-size: 1rem;
   }
-  div.content a {
+  .home div.content a {
     margin-left: -3rem;
     margin-top: -13rem;
     padding: 1rem;
   }
-  div.content a.cv {
+  .home div.content a.cv {
     margin-left: 6rem;
   }
 }
@@ -287,32 +290,104 @@ div.content a:hover {
   .home {
     height: 10vh;
   }
-  div.foto img {
-    width: 100%;
-    margin: 2rem 0rem -10rem;
+  .home div.foto img {
+    width: 80%;
+    margin: 0rem 10% -10rem;
   }
-  div.content {
-    margin-left: 3rem;
+  .home div.content {
+    margin-left: 20%;
     margin-top: 30rem;
     margin-bottom: -10rem;
   }
-  div.content h2 {
+  .home div.content h2 {
     font-size: 2rem;
   }
-  div.content p {
+  .home div.content p {
     margin-top: -15rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-  div.content a {
+  .home div.content a {
     margin-top: -13rem;
     padding: 1rem;
   }
-  div.content a.cv {
-    margin-left: 5rem;
+  .home div.content a.cv {
+    margin-left: 30%;
   }
 }
 
 /** Home end**/
+
+/** About start **/
+.about {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.about h2 {
+  /* background-color: #0077ff; */
+  color: white;
+  font-size: 2rem;
+  margin: 1rem auto 0 auto;
+}
+.about div.about-me {
+  /* background-color: #0077ff; */
+  margin-top: -12rem;
+  margin-left: 4rem;
+}
+.about div.about-me div.foto {
+  flex: 1 1 40rem;
+  z-index: 1;
+}
+.about div.about-me div.foto img {
+  width: 35%;
+  border-radius: 10px;
+  margin-top: 0;
+  filter: grayscale(100);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.about div.about-me div.foto img:hover {
+  filter: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.about div.about-me div.about-desc {
+  margin-top: -11rem;
+  margin-left: 25rem;
+}
+
+.about div.about-me div.about-desc p {
+  color: white;
+  font-size: 17px;
+  font-weight: 300;
+  text-transform: none;
+  text-align: justify;
+  width: 80%;
+  right: 0;
+}
+.about div.about-me div.about-desc a {
+  color: black;
+  background-color: white;
+  font-weight: 600;
+  position: absolute;
+  margin-top: 1rem;
+  position: absolute;
+  line-height: 0;
+  padding: 1.2rem 2.4rem;
+  border-radius: 4em;
+  transition: 0.5s;
+  box-shadow: 0px 5px 18px rgba(43, 43, 43, 0.6);
+}
+.about div.about-me div.about-desc a:hover {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+@media screen and (max-width: 968px) {
+}
+@media screen and (max-width: 568px) {
+}
+/** About end **/
 .test {
   align-items: center;
   justify-content: center;
