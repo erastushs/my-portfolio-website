@@ -9,6 +9,7 @@
 }
 body {
   font-family: "Outfit", sans-serif;
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar {
@@ -123,7 +124,7 @@ nav ul li a:hover {
 /* mobile */
 @media screen and (max-width: 568px) {
   nav {
-    top: 0;
+    bottom: 0;
   }
   ul li {
     width: 50%;
@@ -140,7 +141,7 @@ nav ul li a:hover {
     flex-wrap: wrap;
     align-items: center;
     background-color: #202020;
-    transform: translateY(-130%);
+    transform: translateY(30%);
     opacity: 0;
     transition: transform 0.2s linear, opacity 0.3s linear;
     border-radius: 20px;
@@ -153,7 +154,7 @@ nav ul li a:hover {
     margin-top: 15px;
   }
   nav ul.slide {
-    transform: translateY(30%);
+    transform: translateY(-90%);
     opacity: 1;
   }
 }
