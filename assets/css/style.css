@@ -30,7 +30,7 @@ nav {
   width: 100%;
   justify-content: space-around;
   padding: 10px 0;
-  box-shadow: 1px 1px 3px #2a2a2a;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 100;
 }
@@ -115,16 +115,17 @@ nav ul li a:hover {
 /* responsive*/
 
 /* tablet */
-@media screen and (max-width: 968px) {
+/* @media screen and (max-width: 968px) {
   nav ul {
     width: 40%;
   }
-}
+} */
 
 /* mobile */
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 968px) {
   nav {
     bottom: 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   }
   ul li {
     width: 50%;
@@ -162,7 +163,7 @@ nav ul li a:hover {
 
 section {
   min-height: 100vh;
-  padding: 5rem 16%;
+  padding: 1.8rem 18%;
 }
 
 section:nth-child(odd) {
@@ -171,8 +172,15 @@ section:nth-child(odd) {
 section:nth-child(even) {
   background-color: #2b2b2b;
 }
+
+.heading {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
 /** Home start**/
 .home {
+  padding: 5rem 16%;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -318,31 +326,21 @@ section:nth-child(even) {
 /** Home end**/
 
 /** About start **/
-.about {
-  position: relative;
+.about div.about-me {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.about h2 {
-  /* background-color: #0077ff; */
-  color: white;
-  font-size: 2rem;
-  margin: 1rem auto 0 auto;
-}
-.about div.about-me {
-  /* background-color: #0077ff; */
-  margin-top: -12rem;
-  margin-left: 4rem;
+  position: relative;
+  padding: 1rem;
 }
 .about div.about-me div.foto {
-  flex: 1 1 40rem;
+  flex: 2 1 10rem;
   z-index: 1;
+  text-align: center;
+  padding: 30px;
 }
 .about div.about-me div.foto img {
-  width: 35%;
-  border-radius: 10px;
+  width: 100%;
+  border-radius: 20px;
   margin-top: 0;
   filter: grayscale(100);
   cursor: pointer;
@@ -353,18 +351,19 @@ section:nth-child(even) {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 .about div.about-me div.about-desc {
-  margin-top: -11rem;
-  margin-left: 25rem;
+  flex: 1 1 20rem;
+  z-index: 1;
+  padding: 30px;
 }
 
 .about div.about-me div.about-desc p {
   color: white;
-  font-size: 17px;
+  font-size: 1.3rem;
   font-weight: 300;
   text-transform: none;
   text-align: justify;
-  width: 80%;
-  right: 0;
+  /* width: 60%; */
+  /* right: 0; */
 }
 .about div.about-me div.about-desc a {
   color: black;
@@ -383,17 +382,25 @@ section:nth-child(even) {
   transform: scale(1.1);
   filter: brightness(80%);
 }
+
+/* responsive */
 @media screen and (max-width: 968px) {
+  .about div.about-me {
+    display: inline-block;
+    flex-wrap: wrap;
+  }
+  .about div.about-me .foto {
+    width: 50%;
+    margin: -25px auto;
+  }
+  section.about {
+    padding: 2rem 0;
+  }
 }
 @media screen and (max-width: 568px) {
+  .about div.about-me .foto {
+    width: 100%;
+    margin: -25px auto;
+  }
 }
 /** About end **/
-.test {
-  align-items: center;
-  justify-content: center;
-  font-size: 4em;
-  color: #4e4e4e;
-  font-weight: bolder;
-  padding-bottom: 70px;
-  text-transform: uppercase;
-}
