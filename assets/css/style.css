@@ -316,6 +316,9 @@ nav ul li a:hover {
 /*?======================== Home end =========================*/
 
 /*?======================== About start =========================*/
+section.about {
+  height: 140vh;
+}
 .about div.about-me {
   display: flex;
   flex-wrap: wrap;
@@ -395,6 +398,154 @@ nav ul li a:hover {
 }
 
 /*? My Personal Journey */
+section.about h4 {
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  margin: 20px 0;
+}
+div.journey-tab {
+  display: flex;
+  width: 15rem;
+  height: 2rem;
+  margin: auto;
+  /* background-color: red; */
+}
+div.journey-tab button {
+  background: none;
+  border: none;
+  color: white;
+  transition: 0.2s;
+  margin-right: 35px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 99;
+}
+div.journey-tab button.edu-btn {
+  margin-left: 5px;
+}
+div.journey-tab button i {
+  margin: 4px;
+}
+div.journey-tab button.active {
+  color: #0077ff;
+  border-bottom: 0.2rem solid #0077ff;
+}
+
+.timeline {
+  width: 80%;
+  height: 450px;
+  padding: 50px 0;
+  margin: 10px auto;
+  position: relative;
+  /* background-color: #0077ff; */
+}
+.hidden {
+  opacity: 0;
+}
+
+.container {
+  width: 60%;
+  padding: 30px 0;
+  position: absolute;
+  left: 22%;
+  top: 0;
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 100%;
+  background: #ccd1d9;
+  z-index: 1;
+}
+
+.timeline-block {
+  width: calc(50% + 8px);
+  display: flex;
+  justify-content: space-between;
+  /* clear: both; */
+}
+
+.timeline-block-right {
+  float: right;
+}
+
+.timeline-block-left {
+  float: left;
+  direction: rtl;
+}
+
+.marker {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 2px solid #f5f7fa;
+  background: #0077ff;
+  margin-top: 10px;
+  z-index: 1;
+}
+
+.timeline-content {
+  width: 100%;
+  padding: 0 7px;
+  color: #666;
+}
+
+.timeline-content h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.timeline-content span {
+  font-size: 0.6rem;
+  color: white;
+}
+
+.timeline-content p {
+  font-size: 0.6rem;
+  line-height: 1.5em;
+  word-spacing: 1px;
+  color: white;
+}
+
+@media screen and (max-width: 968px) {
+  section.about {
+    height: 160vh;
+  }
+  .timeline {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 668px) {
+  .container {
+    left: 0%;
+  }
+  .container:before {
+    left: 8px;
+    width: 2px;
+  }
+  .timeline-block {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .timeline-block-right {
+    float: none;
+  }
+
+  .timeline-block-left {
+    float: none;
+    direction: ltr;
+  }
+}
 
 /*?======================== About end =========================*/
 
