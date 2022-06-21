@@ -32,7 +32,6 @@ nav {
   padding: 10px 0;
   box-shadow: 1px 1px 3px #2a2a2a;
   position: fixed;
-  z-index: 100;
 }
 a.logo {
   display: flex;
@@ -129,7 +128,6 @@ nav ul li a:hover {
   ul li {
     width: 50%;
     text-align: center;
-    z-index: -10;
   }
   nav ul {
     position: absolute;
@@ -141,12 +139,12 @@ nav ul li a:hover {
     flex-wrap: wrap;
     align-items: center;
     background-color: #202020;
-    transform: translateY(30%);
+    z-index: -999;
+    transform: translateY(-80%);
     opacity: 0;
-    transition: transform 0.2s linear, opacity 0.3s linear;
+    transition: 0.2s;
     border-radius: 20px;
     box-shadow: 0 0 5px#202020;
-    z-index: -1;
   }
 
   .menu-toggle {
