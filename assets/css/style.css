@@ -757,4 +757,120 @@ section.project {
 /*?======================== Project end =========================*/
 
 /*?======================== Footer start =========================*/
+section.footer {
+  min-height: auto;
+  padding: 0rem 16%;
+}
+.footer .box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer .box-container .box {
+  flex: 1 1 10rem;
+  margin: 2rem;
+}
+.footer .box-container .box.right {
+  position: relative;
+  left: 9rem;
+}
+.footer .box-container .box h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  padding-bottom: 1rem;
+  font-weight: normal;
+}
+.footer .box-container .box p {
+  font-size: 1rem;
+  color: #ccc;
+  padding: 0.7rem 0;
+  text-transform: none;
+}
+.footer .box-container .box p i {
+  padding-right: 1rem;
+  color: #ffae00;
+}
+.footer .box-container .box a {
+  font-size: 0.5rem;
+  color: rgb(238, 238, 238);
+  padding: 0.3rem 0;
+  display: block;
+}
+.footer .box-container .box a:hover {
+  color: #ffae00;
+}
+.footer .box-container .box .share {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0rem 0;
+}
+.footer .box-container .box .share a {
+  height: 2.2rem;
+  width: 2.2rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1rem;
+  margin-right: 1rem;
+  transition: 0.2s;
+  background: rgb(230, 230, 230);
+  color: #02094b;
+  border: none;
+}
+.footer .box-container .box .share a:hover {
+  background: transparent;
+  transform: scale(0.98);
+  border: 0.1rem solid rgb(180, 178, 178);
+  color: #0077ff;
+}
+.footer .credit {
+  padding: 1rem 0 1rem 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  border-top: 0.1rem solid #fff3;
+}
+.footer .credit i {
+  font-size: 0.9rem;
+}
+.footer .credit a {
+  color: #0077ff;
+}
+.footer .fa {
+  color: #e90606;
+  margin: 0 0.3rem;
+  font-size: 1.5rem;
+  animation: pound 0.35s infinite alternate;
+}
+@-webkit-keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+@media screen and (max-width: 968px) {
+  .footer .box-container .box.right {
+    left: 0;
+  }
+}
+@media (max-width: 568px) {
+  section.footer {
+    padding: 1.8rem 0%;
+    min-height: 72vh;
+  }
+  .footer .box-container .box h3 {
+    margin-left: 10px;
+  }
+  .footer .box-container .box {
+    margin: 1rem;
+  }
+  .footer .box-container .box p {
+    padding: 0.7rem;
+  }
+}
 /*?======================== Footer end =========================*/
