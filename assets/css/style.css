@@ -722,6 +722,7 @@ section.project {
   border-radius: 0.5rem;
 }
 .project .viewall h2 {
+  text-transform: none;
   color: white;
   line-height: 5rem;
 }
