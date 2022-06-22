@@ -317,7 +317,7 @@ nav ul li a:hover {
 
 /*?======================== About start =========================*/
 section.about {
-  height: 140vh;
+  height: auto;
 }
 .about div.about-me {
   display: flex;
@@ -454,7 +454,7 @@ div.journey-tab button.active {
   top: 0;
 }
 
-.container:before {
+.about .container:before {
   content: "";
   position: absolute;
   top: 0;
@@ -520,17 +520,17 @@ div.journey-tab button.active {
 
 @media screen and (max-width: 968px) {
   section.about {
-    height: 160vh;
+    min-height: 160vh;
   }
   .timeline {
     width: 80%;
   }
 }
 @media screen and (max-width: 668px) {
-  .container {
+  .about .container {
     left: 0%;
   }
-  .container:before {
+  .about .container:before {
     left: 8px;
     width: 2px;
   }
@@ -551,6 +551,79 @@ div.journey-tab button.active {
 /*?======================== About end =========================*/
 
 /*?======================== Skills start =========================*/
+section.skills {
+  min-height: 100vh;
+  padding: 1.8rem 10%;
+}
+
+.skills .container {
+  /* background: rgba(0, 0, 22, 0.4); */
+  color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  /* margin-top: 2rem; */
+}
+.skills .container .row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+.skills .container .bar {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 1rem;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+  background: rgba(32, 32, 32, 1);
+  filter: grayscale(100);
+  transition: 0.2s;
+}
+.skills .container .bar:hover {
+  filter: none;
+  box-shadow: 0px 0px 7px #0077ff;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.skills .container .bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 1rem; */
+  margin-top: 1rem;
+}
+.skills .container .bar .info img {
+  width: 70px;
+  height: 70px;
+}
+.skills .container .bar .info span {
+  font-size: 1rem;
+  font-weight: 500;
+  /* margin-left: 0.5rem; */
+}
+/* skills media queries starts*/
+@media screen and (max-width: 968px) {
+  .skills .container .row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 568px) {
+  .skills .container {
+    padding: 0;
+    margin: 0;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem;
+    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 1rem;
+  }
+  .skills .container {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+
 /*?======================== Skills end =========================*/
 
 /*?======================== Project start =========================*/

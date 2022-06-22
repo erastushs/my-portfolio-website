@@ -1,3 +1,14 @@
+// Favicon
+document.addEventListener("visibilitychange", function () {
+  if (document.visibilityState === "visible") {
+    document.title = "Portfolio | Erastus HS";
+    $("#favicon").attr("href", "assets/img/foto/logo.png");
+  } else {
+    document.title = "Come Back To My Portfolio";
+    $("#favicon").attr("href", "assets/img/foto/favicon.png");
+  }
+});
+
 // script hamburger untuk mobile responsive
 const menuToggle = document.querySelector(".menu-toggle input");
 const nav = document.querySelector("nav ul");
