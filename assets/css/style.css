@@ -347,6 +347,7 @@ section.about {
   flex: 1 1 20rem;
   z-index: 1;
   padding: 30px;
+  margin-bottom: 40px;
 }
 
 .about div.about-me div.about-desc p {
@@ -445,7 +446,7 @@ div.journey-tab button.active {
   opacity: 0;
 }
 
-.container {
+.about .container {
   width: 60%;
   padding: 30px 0;
   position: absolute;
