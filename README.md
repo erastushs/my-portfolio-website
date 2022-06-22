@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## My Portfolio Website
 
 <a href="https://erastushs.netlify.app/" target="_blank">**Visit Now** </a>
@@ -21,3 +22,7 @@
 © 2022 Erastus HS
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+=======
+# erastushs.github.io
+website portofolio
+>>>>>>> 5d7103abd73e3c0290230f126f4e0669f8df690a
