@@ -719,18 +719,17 @@ section.project {
 .project .viewall .btn {
   position: relative;
   line-height: 0;
-  padding: 1.6rem 3rem;
+  padding: 1rem 2rem;
   border-radius: 0.5em;
   transition: 0.5s;
   color: rgb(255, 255, 255);
   font-weight: 700;
-  border: 2px solid #fff;
-  box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
+  background-color: #0c0c0c;
   text-align: center;
 }
 .project .viewall .btn span {
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   font-family: "Nunito", sans-serif;
 }
 .project .viewall .btn i {
@@ -739,8 +738,8 @@ section.project {
   transition: 0.3s;
 }
 .project .viewall .btn:hover {
-  background: #fff;
-  color: #000;
+  background: #0077ff;
+  color: white;
 }
 .project .viewall .btn:hover i {
   transform: translateX(5px);
