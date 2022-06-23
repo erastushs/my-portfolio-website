@@ -936,11 +936,11 @@ section.footer {
 }
 /*?======================== Footer end =========================*/
 
-/* scroll top starts */
+/*? scroll top starts */
 #scroll-top {
   position: fixed;
   top: -140%;
-  right: 3rem;
+  right: 9rem;
   padding: 0.6rem 0.8rem;
   font-size: 1rem;
   background: #0077ff;
@@ -958,4 +958,4 @@ section.footer {
     top: 140%;
   }
 }
-/* scroll top ends */
+/*? scroll top ends */
