@@ -940,7 +940,7 @@ section.footer {
 #scroll-top {
   position: fixed;
   top: -140%;
-  right: 9rem;
+  right: 3rem;
   padding: 0.6rem 0.8rem;
   font-size: 1rem;
   background: #0077ff;
