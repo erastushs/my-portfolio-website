@@ -935,3 +935,27 @@ section.footer {
   }
 }
 /*?======================== Footer end =========================*/
+
+/* scroll top starts */
+#scroll-top {
+  position: fixed;
+  top: -140%;
+  right: 3rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  background: #0077ff;
+  color: white;
+  border-radius: 10px;
+  transition: 1s linear;
+  z-index: 1;
+}
+#scroll-top.active {
+  top: calc(100% - 7rem);
+}
+
+@media (max-width: 568px) {
+  #scroll-top {
+    top: 140%;
+  }
+}
+/* scroll top ends */

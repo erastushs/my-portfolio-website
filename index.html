@@ -14,6 +14,9 @@
     <!--? BoxIcon -->
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 
+    <!--? AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!--? Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -74,10 +77,10 @@
       <!--? about me start -->
       <h2 class="heading"><i class="fas fa-user-alt"></i> About Me</h2>
       <div class="about-me">
-        <div class="foto">
+        <div data-aos="fade-right" class="foto">
           <img data-tilt src="/assets/img/foto/hero.jpg" alt="" />
         </div>
-        <div class="about-desc">
+        <div data-aos="fade-left" class="about-desc">
           <p>Hello everyone, My name Erastus Hendro Setiono but you can call me Erastus. I am a full-stack web developer who is very passionate about improving my coding skills and developing websites.</p>
           <a href="#" class="cv"
             ><span>Download CV</span>
@@ -88,69 +91,70 @@
       <!--? about me end -->
 
       <!--? personal journey  -->
-      <h4>My Personal Journey</h4>
-      <div class="journey-tab">
-        <div class="edu-tab">
-          <button class="edu-btn active"><i class="bx bxs-graduation"></i>Education</button>
+      <div data-aos="zoom-in-down">
+        <h4>My Personal Journey</h4>
+        <div class="journey-tab">
+          <div class="edu-tab">
+            <button class="edu-btn active"><i class="bx bxs-graduation"></i>Education</button>
+          </div>
+          <div class="work-tab">
+            <button class="work-btn"><i class="bx bx-briefcase"></i>Work</button>
+          </div>
         </div>
-        <div class="work-tab">
-          <button class="work-btn"><i class="bx bx-briefcase"></i>Work</button>
-        </div>
-      </div>
-      <!--? Timeline -->
-      <div class="timeline">
-        <div class="edu-space">
-          <div class="container">
-            <div class="timeline-block timeline-block-right">
-              <div class="marker"></div>
-              <div class="timeline-content">
-                <h3>Public Primary School in Ngagel</h3>
-                <span></span>
-                <p>2008-2014</p>
+        <!--? Timeline -->
+        <div class="timeline">
+          <div class="edu-space">
+            <div class="container">
+              <div class="timeline-block timeline-block-right">
+                <div class="marker"></div>
+                <div class="timeline-content">
+                  <h3>Public Primary School in Ngagel</h3>
+                  <span></span>
+                  <p>2008-2014</p>
+                </div>
               </div>
-            </div>
 
-            <div class="timeline-block timeline-block-left">
-              <div class="marker"></div>
-              <div class="timeline-content">
-                <h3>2Prime Junior High School in Sentani</h3>
-                <span></span>
-                <p>2014-2017</p>
+              <div class="timeline-block timeline-block-left">
+                <div class="marker"></div>
+                <div class="timeline-content">
+                  <h3>2Prime Junior High School in Sentani</h3>
+                  <span></span>
+                  <p>2014-2017</p>
+                </div>
               </div>
-            </div>
 
-            <div class="timeline-block timeline-block-right">
-              <div class="marker"></div>
-              <div class="timeline-content">
-                <h3>1 Public High School in Sentani</h3>
-                <span></span>
-                <p>2017-2020</p>
+              <div class="timeline-block timeline-block-right">
+                <div class="marker"></div>
+                <div class="timeline-content">
+                  <h3>1 Public High School in Sentani</h3>
+                  <span></span>
+                  <p>2017-2020</p>
+                </div>
               </div>
-            </div>
 
-            <div class="timeline-block timeline-block-left">
-              <div class="marker"></div>
-              <div class="timeline-content">
-                <h3>On The Way</h3>
-                <span></span>
-                <p>On The Way</p>
+              <div class="timeline-block timeline-block-left">
+                <div class="marker"></div>
+                <div class="timeline-content">
+                  <h3>On The Way</h3>
+                  <span></span>
+                  <p>On The Way</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="work-space hidden">
-          <div class="container">
-            <div class="timeline-block timeline-block-right">
-              <div class="marker"></div>
-              <div class="timeline-content">
-                <h3>Freelancer</h3>
-                <span></span>
-                <p>2022-now</p>
+          <div class="work-space hidden">
+            <div class="container">
+              <div class="timeline-block timeline-block-right">
+                <div class="marker"></div>
+                <div class="timeline-content">
+                  <h3>Freelancer</h3>
+                  <span></span>
+                  <p>2022-now</p>
+                </div>
               </div>
-            </div>
 
-            <!-- <div class="timeline-block timeline-block-left">
+              <!-- <div class="timeline-block timeline-block-left">
               <div class="marker"></div>
               <div class="timeline-content">
                 <h3>Coming soon</h3>
@@ -158,6 +162,7 @@
                 <p>2022-now</p>
               </div>
             </div> -->
+            </div>
           </div>
         </div>
       </div>
@@ -168,7 +173,7 @@
     <section class="skills" id="skills">
       <h2 class="heading"><i class="fas fa-laptop-code"></i> My Skills</h2>
       <div class="container">
-        <div class="row" id="skillsContainer">
+        <div data-aos="zoom-in-down" data-aos-offset="300" data-aos-duration="1000" class="row" id="skillsContainer">
           <div data-tilt class="bar">
             <div class="info">
               <img src="/assets/img/logo/html.png" />
@@ -225,7 +230,7 @@
     <!--?======================== Project start ========================= -->
     <section class="project" id="project">
       <h2 class="heading"><i class="fas fa-laptop-code"></i> Project Made</h2>
-      <div class="box-container">
+      <div data-aos="zoom-in" data-aos-offset="300" data-aos-duration="1000" class="box-container">
         <!--? Discord Bot -->
         <div data-tilt class="box">
           <img draggable="false" src="/assets/img/Project/discord-thumb.png" alt="" />
@@ -261,7 +266,7 @@
         </div>
       </div>
 
-      <div class="viewall">
+      <div data-aos="zoom-in" data-aos-duration="800" data-aos-easing="ease-in" class="viewall">
         <h2>Interested working with me?</h2>
         <div>
           <a href="#" class="btn more"
@@ -301,6 +306,10 @@
     </section>
     <!--?======================== Footer end ========================= -->
 
+    <!--?======================== Scroll Up ========================= -->
+    <a href="#home" aria-label="ScrollTop" class="fas fa-arrow-up" id="scroll-top"></a>
+    <!--?======================== Scroll Up ========================= -->
+
     <!--? jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -313,6 +322,12 @@
 
     <!--? Tilt-Vannila.js -->
     <script src="assets/js/vanilla-tilt.min.js"></script>
+
+    <!--? AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <!--? Main JavaScript -->
     <script src="assets/js/script.js"></script>

@@ -80,3 +80,13 @@ workBtn.addEventListener("click", function () {
   document.querySelector(".work-space").classList.remove("hidden");
   document.querySelector(".edu-space").classList.add("hidden");
 });
+
+let offset = 0;
+window.addEventListener("scroll", function () {
+  let st = window.pageYOffset;
+  if (st > offset) {
+    document.querySelector(".fa-arrow-up").classList.add("active");
+  } else {
+    document.querySelector(".fa-arrow-up").classList.remove("active");
+  }
+});
