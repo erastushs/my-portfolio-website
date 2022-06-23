@@ -692,6 +692,7 @@ section.project {
   justify-content: center;
 }
 .project .desc p {
+  text-transform: none;
   color: white;
   font-size: 1rem;
 }
