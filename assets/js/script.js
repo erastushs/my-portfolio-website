@@ -62,3 +62,14 @@ var typed = new Typed(".typing-text", {
   backSpeed: 25,
   backDelay: 500,
 });
+
+// scroll up pop up
+let offset = 0;
+window.addEventListener("scroll", function () {
+  let st = window.pageYOffset;
+  if (st > offset) {
+    document.querySelector(".fa-arrow-up").classList.add("active");
+  } else {
+    document.querySelector(".fa-arrow-up").classList.remove("active");
+  }
+});
