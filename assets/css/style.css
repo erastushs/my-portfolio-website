@@ -372,7 +372,7 @@ section.about {
   margin-top: 1rem;
   position: absolute;
   line-height: 0;
-  padding: 1.2rem 2rem;
+  padding: 1rem 1.8rem;
   border-radius: 0.5em;
   transition: background-color 0.3s;
   box-shadow: 0px 5px 18px rgba(43, 43, 43, 0.6);
