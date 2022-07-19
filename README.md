@@ -16,7 +16,6 @@
 - Tilt-Vanilla.JS
 - AOS
 - Font Awesome
-- BoxIcon
 
 © 2022 Erastus HS
 

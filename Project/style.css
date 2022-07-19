@@ -182,8 +182,8 @@ section.project {
 }
 
 .project .box-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
   margin: 2rem;
 }
@@ -226,10 +226,10 @@ section.project {
   font-size: 1.2rem;
 }
 .project .box-container .box:hover .content {
-  top: 25%;
+  top: 15%;
 }
 .project .desc {
-  margin: 2rem;
+  margin: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -238,12 +238,20 @@ section.project {
   text-transform: none;
   color: white;
   font-size: 1rem;
+  margin-top: 0.5rem;
 }
 .project .desc .btns {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+.project .desc .btns .btn.view:hover i {
+  transform: translateX(-5px);
+}
+.project .desc .btns .btn.code:hover i {
+  transform: translateX(5px);
 }
 .project .desc .btns .btn {
   line-height: 0;
@@ -253,7 +261,6 @@ section.project {
   font-size: 1rem;
   color: #fff;
   background: rgb(16, 16, 16);
-  margin-right: 2rem;
 }
 .project .desc .btns .btn:hover {
   background: #0077ff;
@@ -285,6 +292,9 @@ section.project {
 @media screen and (max-width: 568px) {
   section.project {
     padding: 1.8rem 2% 6rem 2%;
+  }
+  .project .box-container {
+    grid-template-columns: repeat(1, 1fr);
   }
   .project .desc .btns .btn {
     padding: 1rem 1rem;

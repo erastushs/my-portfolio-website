@@ -235,7 +235,7 @@ nav ul li a:hover {
   position: absolute;
   line-height: 0;
   padding: 1.3rem 2.4rem;
-  border-radius: 4em;
+  border-radius: 5em;
   transition: transform 0.3s, background 0.3s, color 0s;
   box-shadow: 0px 5px 18px rgba(32, 32, 32, 0.6);
 }
@@ -372,14 +372,19 @@ section.about {
   margin-top: 1rem;
   position: absolute;
   line-height: 0;
-  padding: 1.2rem 2.4rem;
-  border-radius: 4em;
-  transition: transform 0.3s, background 0.3s, color 0s;
+  padding: 1.2rem 2rem;
+  border-radius: 0.5em;
+  transition: background-color 0.3s;
   box-shadow: 0px 5px 18px rgba(43, 43, 43, 0.6);
+}
+.about div.about-me div.about-desc a i {
+  transition: color 0s, transform 0.3s;
+}
+.about div.about-me div.about-desc a:hover i {
+  transform: translateX(5px);
 }
 .about div.about-me div.about-desc a:hover {
   color: white;
-  transform: scale(1.1);
   background: #0077ff;
 }
 
@@ -493,8 +498,9 @@ section.project {
   color: rgb(255, 230, 0);
 }
 .project .box-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* flex-wrap: wrap; */
   gap: 1.5rem;
   margin: 2rem;
 }
@@ -537,10 +543,10 @@ section.project {
   font-size: 1.2rem;
 }
 .project .box-container .box:hover .content {
-  top: 25%;
+  top: 15%;
 }
 .project .desc {
-  margin: 2rem;
+  margin: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -549,12 +555,14 @@ section.project {
   text-transform: none;
   color: white;
   font-size: 1rem;
+  margin-top: 0.5rem;
 }
 .project .desc .btns {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
 }
 .project .desc .btns .btn {
   line-height: 0;
@@ -564,7 +572,12 @@ section.project {
   font-size: 1rem;
   color: #fff;
   background: rgb(16, 16, 16);
-  margin-right: 2rem;
+}
+.project .desc .btns .btn.view:hover i {
+  transform: translateX(-5px);
+}
+.project .desc .btns .btn.code:hover i {
+  transform: translateX(5px);
 }
 .project .desc .btns .btn:hover {
   background: #0077ff;
@@ -590,7 +603,7 @@ section.project {
   position: relative;
   padding: 1rem 1rem;
   border-radius: 0.5em;
-  transition: background 0.3s, color 0s;
+  transition: background-color 0.3s, color 0s;
   color: rgb(255, 255, 255);
   font-weight: 700;
   background-color: #2b2b2b;
@@ -649,6 +662,9 @@ section.project {
   section.project {
     padding: 1.8rem 2%;
   }
+  .project .box-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .project .desc .btns .btn {
     padding: 1rem 1rem;
   }
@@ -702,7 +718,7 @@ section.footer {
   padding-right: 1rem;
   color: #0077ff;
 }
-.footer .box-container .box a {
+/* .footer .box-container .box a {
   font-size: 0.5rem;
   color: rgb(238, 238, 238);
   padding: 0.3rem 0;
@@ -710,7 +726,7 @@ section.footer {
 }
 .footer .box-container .box a:hover {
   color: #0077ff;
-}
+} */
 .footer .box-container .box .share {
   display: flex;
   flex-wrap: wrap;
@@ -724,14 +740,14 @@ section.footer {
   border-radius: 50%;
   font-size: 1rem;
   margin-right: 1rem;
-  transition: 0.2s;
+  transition: 0.3s;
   background: rgb(230, 230, 230);
   color: #02094b;
   border: none;
 }
 .footer .box-container .box .share a:hover {
   background: transparent;
-  transform: scale(0.98);
+  transform: scale(0.9);
   border: 0.1rem solid rgb(180, 178, 178);
   color: #0077ff;
 }
