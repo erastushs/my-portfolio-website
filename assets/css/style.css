@@ -16,7 +16,6 @@ body.hidden {
 }
 
 section {
-  min-height: 100vh;
   padding: 1.8rem 18%;
 }
 
@@ -213,6 +212,7 @@ nav ul li a:hover {
 
 /*?======================== Home Start =========================*/
 .home {
+  min-height: 100vh;
   padding: 5rem 16%;
   position: relative;
   display: flex;
@@ -722,9 +722,10 @@ section.project {
 /*?======================== Project end =========================*/
 
 /*?======================== Footer start =========================*/
-section.footer {
+.footer {
   min-height: auto;
   padding: 0rem 16%;
+  background-color: #2b2b2b;
 }
 .footer .box-container {
   display: flex;
