@@ -73,3 +73,15 @@ window.addEventListener("scroll", function () {
     document.querySelector(".fa-arrow-up").classList.remove("active");
   }
 });
+
+// script preloader
+const preload = document.querySelector("#preloader");
+const preloadDelay = 300;
+const body = document.querySelector("body");
+
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    preload.classList.add("hidden");
+    body.classList.remove("hidden");
+  }, preloadDelay);
+});

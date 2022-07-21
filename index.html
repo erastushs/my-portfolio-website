@@ -21,7 +21,23 @@
     <!--? Favicon -->
     <link id="favicon" rel="shortcut icon" href="assets/img/foto/logo.png" type="image/x-png" />
   </head>
-  <body>
+  <body class="hidden">
+    <!--?======================== Preloader start ========================= -->
+    <div class="preloader" id="preloader">
+      <div class="loading">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="5.997cm" height="3.492cm">
+          <image
+            x="0px"
+            y="0px"
+            width="170px"
+            height="99px"
+            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAABjCAMAAAA8T2vMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACmlBMVEUAd/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/////9GjV3OAAAA3HRSTlMACBwtP1p1jKO4wM3W293ezL+3oItyWD0rGQcBGzdgjrvc8vz78NmJMxcKWZjO8e3JkVMnBipinvmXWyQDOXjD9XE0e/7Ecyx0wmkUQezkljVevLRRDm7PxmEJ32fSXFTQSbqsE4r68wtWopDh/dRDDcWwfGpLMCkoLkBOdtPufgTmwZU6HoCz4iXohBEPaOBSBUIVfRi99nk4y6sM17WP5yBH6x9d+KY+AoM8yGZP6SOo6thfVe96HaS59EUv0bI7ho2FIq0QY20Sx3CUqpqnvspXr6GxUBrjbEwWsFzSqgAAAAFiS0dE3XBnsyEAAAAHdElNRQfmBxUSHiVZybUEAAAE1UlEQVR42tWb/V8URRjAjxIwRZIzCDk47/B4CQUJjo4uyPBQCo3OinzBlxLBlECOKDJFsCI0jBI00RILISGzrhTf8AWsjF7svexl/5h2b+/wOGZ3n92dnbn7/rrPPPv9zM1nZ+aZOZ1OA8LuuHNaeETk9LtmzIyaFX139Kyo2TH6OffExt0bPzdBixcqwZCYZJxnMifPZ9BYUlL1aeHp91HWzIhfsDAzi4GwKPv+nFwrJc+8B2xmC0jTR37Ug/aHSGsWFD68OF+Wpo9HTEXpBEWXOGYq0vRSvHRZCRHPxEcfK1Yjyg8FU+lyrUVX2B5X7clT9oRTQ0/ryicxeXqwPPW0QRvR8mdW4RT1sHrNWg1EIyqwi3JErcM8mSWUmjUR5Vi/AeMwMGx8VjNRjqXP4TJdsklTUY7KPByim6uqNTdlmC2O51WbbtVukE4mU+UoSNxGSJSjZrMK05wXFLyx2FKdX12rxLVuu1LR+hrwS5KjXQ22eS82hr80Lenl+KZXmnY4X91p3BU5R9+8W4ZrbUurIlPnbEj2Pa+9XrTxjbYMoSwFcwvtb7bvhcrG7FNgakyRSvvWpg67cz8o2duFndveAbmWvStX9IDEj19WWdTVLS9ledfBbMByvNYhL+2h90SSHXb1HIF1ZiCGvNij0rLvfyAjZckxwTzJvUZV26MC5/EPpVyzPwKn6zshkCNFv7JfjSdP9xqXhGu0E5hq4GN0gsxdGDx5treL73Wz+kBpSpGNd58cHMIlypHUMF/M9XAcIEcE8hf5pA2np4dTJtGO7ZFM4EC0+vR0PXZRjs+yxVxrJFr3TG3iCi/QRJTFuuxzEdcB0baxU+KP2rEO0UDcXwirfilWKugMjD5zVvOK2LDwhNsp3CouYL1/7ryySUkeFy4KqV4SbDM4Mjlyei4BUY5GgZVRqlCD+MlDvPkyIVGWK1eRqnsFwvfX+UdZOsrJmbIvP4lSNaODh675B60aJSnKYmhBqLrQsWN+IbXXiXYpz9ktU1RbkIE5/kNkJ3lRlhWB67l8NyrM7bdZM+Gf7mGkB3xhx1BBCYtvB3zVSslUp8tNnfRVRZYI0yaeZw3IzY+Try/dNv3mBipicGLpWHGKpinLt95yc9048vF3E/3+PbZlvmKsXT9EXo/tC0M//dFn2q6maESCUV996aYGdXmsZKz3mtponYCCOe81/Umjgxl8tHkXYLagN9Xd5E1/PkBbRJJB/rxUH/TjVKf7xWP6K4mNiUp+4+co+l9+SayeaSylkLYHgK2eTt1AWwOA1VPtlyq4BAXDnGlMK20NAENcRXYR8Ss6ShjlOhVSx6TP76zpH7QlQOyzsJvTQ7QtQHA7/2HaEiDCKhjmT9oSMP5it6dNtCVg9DJMB20HGLeymL9DYD3F8Q/DNNJ2AKJnjoXAcpqjf4Qx0nYAMs6YM9RnIUKD2ElLULH83Ikb6rMQ4V+mirYClDHmCm0FIIbmGbQVoLgZqsVpOSwYkXnxiB7He2kbgFl9mrYBlO6rt2grQDlSSdsAjP0gbQMwji7aBmCqaP+lDEx9mqaXfHDiHlefgxA7FN++Jq8aEsU/XjXYj1L9VNX/B4MUJa20DcD0B/8ZpY//aAvACZW9KkuY+hSkCJFaFUfwn6eHoqpmt7yx8z+ECzGqLlYmwwAAAABJRU5ErkJggg=="
+          />
+        </svg>
+      </div>
+    </div>
+    <!--?======================== Preloader end ========================= -->
+
     <!--?======================== Navbar start ========================= -->
     <nav class="navbar">
       <a href="" class="logo">
