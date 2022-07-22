@@ -61,7 +61,7 @@ html::-webkit-scrollbar-thumb:hover {
 .preloader.hidden {
   transition: 1s;
   opacity: 0;
-  transform: scale(1.5);
+  transform: scale(2.5);
   visibility: hidden;
 }
 .preloader .loading {
