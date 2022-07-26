@@ -1,18 +1,1 @@
-// Favicon
-document.addEventListener("visibilitychange", function () {
-  if (document.visibilityState === "visible") {
-    document.title = "Project | Portfolio Erastus HS";
-    $("#favicon").attr("href", "../assets/img/foto/logo.png");
-  } else {
-    document.title = "Welcome to My Portfolio";
-    $("#favicon").attr("href", "../assets/img/foto/favicon.png");
-  }
-});
-
-// script hamburger untuk mobile responsive
-const menuToggle = document.querySelector(".menu-toggle input");
-const nav = document.querySelector("nav ul");
-
-menuToggle.addEventListener("click", function () {
-  nav.classList.toggle("slide");
-});
+function _0x47a0(_0x5c788c,_0x177968){const _0x4e763e=_0x4e76();return _0x47a0=function(_0x47a072,_0x5e7cf1){_0x47a072=_0x47a072-0x1a0;let _0x313ea8=_0x4e763e[_0x47a072];return _0x313ea8;},_0x47a0(_0x5c788c,_0x177968);}const _0x3531d5=_0x47a0;(function(_0x27caa6,_0x4e00a2){const _0x411748=_0x47a0,_0x1069dd=_0x27caa6();while(!![]){try{const _0x1f1329=parseInt(_0x411748(0x1a9))/0x1+-parseInt(_0x411748(0x1b1))/0x2+parseInt(_0x411748(0x1af))/0x3+parseInt(_0x411748(0x1a6))/0x4+-parseInt(_0x411748(0x1b2))/0x5*(parseInt(_0x411748(0x1a4))/0x6)+-parseInt(_0x411748(0x1b4))/0x7+-parseInt(_0x411748(0x1a7))/0x8;if(_0x1f1329===_0x4e00a2)break;else _0x1069dd['push'](_0x1069dd['shift']());}catch(_0x46914d){_0x1069dd['push'](_0x1069dd['shift']());}}}(_0x4e76,0xcf716),document['addEventListener']('visibilitychange',function(){const _0x1dbb4f=_0x47a0;document[_0x1dbb4f(0x1a2)]===_0x1dbb4f(0x1a8)?(document[_0x1dbb4f(0x1ad)]=_0x1dbb4f(0x1aa),$(_0x1dbb4f(0x1b3))[_0x1dbb4f(0x1b0)]('href','../assets/img/foto/logo.png')):(document[_0x1dbb4f(0x1ad)]='Welcome\x20to\x20My\x20Portfolio',$(_0x1dbb4f(0x1b3))[_0x1dbb4f(0x1b0)]('href',_0x1dbb4f(0x1a1)));}));const menuToggle=document['querySelector'](_0x3531d5(0x1a5)),nav=document[_0x3531d5(0x1ae)](_0x3531d5(0x1a3));menuToggle['addEventListener'](_0x3531d5(0x1b5),function(){const _0x293666=_0x3531d5;nav[_0x293666(0x1ab)][_0x293666(0x1ac)](_0x293666(0x1a0));});function _0x4e76(){const _0x42e7d7=['attr','1786164TeBgJk','52035OEOPmO','#favicon','7733838tLlaOy','click','slide','../assets/img/foto/favicon.png','visibilityState','nav\x20ul','534qWNInj','.menu-toggle\x20input','6733448NuizXo','2524552PFBCbb','visible','881760XwownB','Project\x20|\x20Portfolio\x20Erastus\x20HS','classList','toggle','title','querySelector','4572816BSWzJs'];_0x4e76=function(){return _0x42e7d7;};return _0x4e76();}
