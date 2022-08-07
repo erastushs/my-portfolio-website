@@ -12,7 +12,6 @@
 
 - JQuarry
 - Particle.JS
-- Typed.JS
 - Tilt-Vanilla.JS
 - AOS
 - Font Awesome
