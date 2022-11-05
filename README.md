@@ -14,7 +14,7 @@
 - Particle.JS
 - Tilt-Vanilla.JS
 - AOS
-- Font Awesome
+- Font Awesome.
 
 © 2022 Erastus HS
 
