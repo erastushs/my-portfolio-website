@@ -10,7 +10,7 @@
 
 ### Library
 
-- JQuarry
+- jQuery
 - Particle.JS
 - Tilt-Vanilla.JS
 - AOS

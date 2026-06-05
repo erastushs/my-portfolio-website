@@ -55,64 +55,63 @@ $('a[href*="#"]').on("click", function (e) {
 });
 
 // typed js vanilla
-let dataTyping = {
-  target: "typing-text",
-  text: '["frontend development", "web development"]',
-  delay: "1000",
-};
+(function () {
+  let dataTyping = {
+    target: "typing-text",
+    text: '["frontend development", "web development"]',
+    delay: "1000",
+  };
 
-class textType {
-  constructor(el, text, delay) {
-    this.text = text;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(delay, 10) || 2000;
-    this.txt = "";
-    this.tick();
-    this.isDeleting = false;
-  }
-  tick() {
-    let i = this.loopNum % this.text.length;
-    let fullTxt = this.text[i];
-
-    if (this.isDeleting) {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-
-    this.el.innerText = this.txt;
-
-    let that = this;
-    let timing = Math.floor(200 - Math.random() * 100);
-
-    if (this.isDeleting) {
-      timing /= 2;
-    }
-
-    if (!this.isDeleting && this.txt === fullTxt) {
-      timing = this.period;
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === "") {
+  class TextType {
+    constructor(el, text, delay) {
+      this.text = text;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(delay, 10) || 2000;
+      this.txt = "";
       this.isDeleting = false;
-      this.loopNum++;
-      timing = 500;
+      this.tick();
     }
+    tick() {
+      let i = this.loopNum % this.text.length;
+      let fullTxt = this.text[i];
 
-    setTimeout(function () {
-      that.tick();
-    }, timing);
-  }
-}
+      if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
 
-window.onload = function () {
-  let el = document.getElementsByClassName(dataTyping.target);
-  for (let i = 0; i < el.length; i++) {
-    if (dataTyping.text) {
-      new textType(el[i], JSON.parse(dataTyping.text), dataTyping.delay);
+      this.el.innerText = this.txt;
+
+      let timing = Math.floor(200 - Math.random() * 100);
+
+      if (this.isDeleting) {
+        timing /= 2;
+      }
+
+      if (!this.isDeleting && this.txt === fullTxt) {
+        timing = this.period;
+        this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === "") {
+        this.isDeleting = false;
+        this.loopNum++;
+        timing = 500;
+      }
+
+      setTimeout(() => this.tick(), timing);
     }
   }
-};
+
+  window.addEventListener("load", function () {
+    let words = dataTyping.text ? JSON.parse(dataTyping.text) : null;
+    if (!words) return;
+    let el = document.getElementsByClassName(dataTyping.target);
+    for (let i = 0; i < el.length; i++) {
+      new TextType(el[i], words, dataTyping.delay);
+    }
+  });
+})();
 
 // scroll up pop up
 let offset = 0;

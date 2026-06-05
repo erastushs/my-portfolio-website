@@ -844,6 +844,16 @@ section.project {
 }
 /*?======================== Footer end =========================*/
 
+/*? typing cursor blink */
+.typing-text + span {
+  animation: blink 0.7s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 /*? scroll top starts */
 #scroll-top {
   position: fixed;
