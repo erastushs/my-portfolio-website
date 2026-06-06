@@ -1,23 +1,145 @@
+// Project data
+var projects = [
+  {
+    title: "LuxyHub",
+    description: "Your ultimate destination for Roblox scripts, game tools, and community resources.",
+    image: "/assets/img/Project/luxyhub.png",
+    alt: "luxyhub",
+    techStack: [
+      { icon: "react", name: "Next.js", brand: true },
+      { icon: "js-square", name: "TypeScript", brand: true },
+      { icon: "css3-alt", name: "Tailwind", brand: true },
+      { icon: "check-circle", name: "ESLint", brand: false }
+    ],
+    demoUrl: "http://luxyhub.space",
+    githubUrl: "https://github.com/erastushs/luxy-hub",
+    featured: true
+  },
+  {
+    title: "BloxAtlas",
+    description: "Explore Roblox Through Data",
+    image: "/assets/img/Project/bloxatlas.png",
+    alt: "bloxatlas",
+    techStack: [
+      { icon: "react", name: "Next.js", brand: true },
+      { icon: "js-square", name: "TypeScript", brand: true },
+      { icon: "css3-alt", name: "Tailwind", brand: true },
+      { icon: "check-circle", name: "ESLint", brand: false }
+    ],
+    demoUrl: "http://bloxatlas.vercel.app",
+    githubUrl: "https://github.com/erastushs/bloxatlas",
+    featured: true
+  },
+  {
+    title: "Discord Bot",
+    description: "Personal discord bot for my server discord",
+    image: "/assets/img/Project/discord-thumb.jpg",
+    alt: "discord",
+    techStack: [
+      { icon: "node-js", name: "Node.js", brand: true }
+    ],
+    demoUrl: "http://discord.io/HoakFamily",
+    githubUrl: "https://github.com/erastushs/hoak-bot",
+    featured: false
+  },
+  {
+    title: "Website Juice you",
+    description: "Just simple website for submission on dicoding",
+    image: "/assets/img/Project/website-juice.jpg",
+    alt: "JuiceYou-Project",
+    techStack: [
+      { icon: "html5", name: "HTML5", brand: true },
+      { icon: "css3-alt", name: "CSS3", brand: true },
+      { icon: "js-square", name: "JavaScript", brand: true }
+    ],
+    demoUrl: "https://juiceyoubeta.netlify.app/",
+    githubUrl: "https://github.com/erastushs/website-juice",
+    featured: true
+  },
+  {
+    title: "Website My Bookshelfs",
+    description: "Catalog and organize library or book collection on multiple virtual bookshelves",
+    image: "/assets/img/Project/my-bookshelfs.jpg",
+    alt: "my-bookshelfs-project",
+    techStack: [
+      { icon: "html5", name: "HTML5", brand: true },
+      { icon: "css3-alt", name: "CSS3", brand: true },
+      { icon: "js-square", name: "JavaScript", brand: true }
+    ],
+    demoUrl: "https://my-bookshelfs.netlify.app/",
+    githubUrl: "https://github.com/erastushs/My-bookshelf",
+    featured: true
+  },
+  {
+    title: "Coming Soon",
+    description: "Coming Soon",
+    image: "/assets/img/Project/coming-soon-thumb.jpg",
+    alt: "coming-soon-thumb",
+    techStack: [
+      { icon: "html5", name: "HTML5", brand: true },
+      { icon: "css3-alt", name: "CSS3", brand: true },
+      { icon: "js-square", name: "JavaScript", brand: true }
+    ],
+    demoUrl: "#",
+    githubUrl: "#",
+    featured: false
+  }
+];
+
+function renderProjects(container, projectList, iconPath) {
+  if (!container) return;
+  container.innerHTML = projectList.map(function (p) {
+    var techHtml = p.techStack.map(function (t) {
+      var cls = t.brand ? "icon icon-brand" : "icon";
+      return '<svg class="' + cls + '" aria-hidden="true"><use href="' + iconPath + '#' + t.icon + '"/></svg> ' + t.name;
+    }).join(", ");
+    return '<div class="box">'
+    + '<img draggable="false" src="' + p.image + '" alt="' + p.alt + '" />'
+    + '<div class="content">'
+    + '<div class="tag"><h3>' + p.title + '</h3></div>'
+    + '<div class="desc">'
+    + '<p>' + p.description + '</p>'
+    + '<p>Build with: ' + techHtml + '</p>'
+    + '<div class="btns">'
+    + '<a href="' + p.demoUrl + '" class="btn view" target="_blank"><svg class="icon" aria-hidden="true"><use href="' + iconPath + '#eye"/></svg> View</a>'
+    + '<a href="' + p.githubUrl + '" class="btn code" target="_blank">Code <svg class="icon" aria-hidden="true"><use href="' + iconPath + '#code"/></svg></a>'
+    + '</div></div></div></div>';
+  }).join("");
+}
+
+function initProjects() {
+  var container = document.getElementById("projectContainer");
+  if (!container) return;
+  var iconPath = container.getAttribute("data-icon-path") || "assets/icons.svg";
+  var showAll = container.getAttribute("data-show-all") === "true";
+  var list = showAll ? projects : projects.filter(function (p) { return p.featured; });
+  renderProjects(container, list, iconPath);
+}
+
+document.addEventListener("DOMContentLoaded", initProjects);
+
 // Favicon
 document.addEventListener("visibilitychange", function () {
+  var isProjectPage = window.location.pathname.indexOf("/Project/") !== -1;
+  var favicon = document.getElementById("favicon");
   if (document.visibilityState === "visible") {
-    document.title = "Portfolio | Erastus HS";
-    const favicon = document.getElementById("favicon");
-    if (favicon) favicon.setAttribute("href", "assets/img/foto/logo.png");
+    document.title = isProjectPage ? "Project | Portfolio Erastus HS" : "Portfolio | Erastus HS";
+    if (favicon) favicon.setAttribute("href", isProjectPage ? "../assets/img/foto/logo.png" : "assets/img/foto/logo.png");
   } else {
     document.title = "Welcome to My Portfolio";
-    const favicon = document.getElementById("favicon");
-    if (favicon) favicon.setAttribute("href", "assets/img/foto/favicon.png");
+    if (favicon) favicon.setAttribute("href", isProjectPage ? "../assets/img/foto/favicon.png" : "assets/img/foto/favicon.png");
   }
 });
 
 // script hamburger untuk mobile responsive
-const menuToggle = document.querySelector(".menu-toggle input");
-const nav = document.querySelector("nav ul");
+var menuToggle = document.querySelector(".menu-toggle input");
+var nav = document.querySelector("nav ul");
 
-menuToggle.addEventListener("click", function () {
-  nav.classList.toggle("slide");
-});
+if (menuToggle) {
+  menuToggle.addEventListener("click", function () {
+    nav.classList.toggle("slide");
+  });
+}
 
 //script toggle navbar aktif
 // toggle active state for nav links (native)
@@ -33,21 +155,22 @@ document.querySelectorAll("nav ul li").forEach((li) => {
 });
 
 // scroll spy
-let section = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll("ul li a");
+var sections = document.querySelectorAll("section");
+var navLinks = document.querySelectorAll("ul li a");
 
-window.onscroll = () => {
-  section.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 250;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
+window.onscroll = function () {
+  sections.forEach(function (sec) {
+    var top = window.scrollY;
+    var offset = sec.offsetTop - 250;
+    var height = sec.offsetHeight;
+    var id = sec.getAttribute("id");
 
     if (top >= offset && top < offset + height) {
-      navLinks.forEach((links) => {
+      navLinks.forEach(function (links) {
         links.classList.remove("active");
-        document.querySelector("ul li a[href*=" + id + "]").classList.add("active");
       });
+      var match = document.querySelector("ul li a[href*=" + id + "]");
+      if (match) match.classList.add("active");
     }
   });
 };
@@ -126,24 +249,29 @@ document.querySelectorAll('a[href*="#"]').forEach((anchor) => {
 })();
 
 // scroll up pop up
-let offset = 0;
-window.addEventListener("scroll", function () {
-  let st = window.pageYOffset;
-  if (st > offset) {
-    document.querySelector(".scroll-top").classList.add("active");
-  } else {
-    document.querySelector(".scroll-top").classList.remove("active");
-  }
-});
+var scrollTopBtn = document.querySelector(".scroll-top");
+if (scrollTopBtn) {
+  var stOffset = 0;
+  window.addEventListener("scroll", function () {
+    var st = window.pageYOffset;
+    if (st > stOffset) {
+      scrollTopBtn.classList.add("active");
+    } else {
+      scrollTopBtn.classList.remove("active");
+    }
+  });
+}
 
 // script preloader
-const preload = document.querySelector("#preloader");
-const preloadDelay = 300;
-const body = document.querySelector("body");
+var preload = document.querySelector("#preloader");
+if (preload) {
+  var preloadDelay = 300;
+  var body = document.querySelector("body");
 
-window.addEventListener("load", function () {
-  setTimeout(() => {
-    preload.classList.add("hidden");
-    body.classList.remove("hidden");
-  }, preloadDelay);
-});
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      preload.classList.add("hidden");
+      body.classList.remove("hidden");
+    }, preloadDelay);
+  });
+}

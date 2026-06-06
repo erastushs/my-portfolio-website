@@ -726,6 +726,44 @@ section.project {
 
 /*?======================== Project end =========================*/
 
+/*? project-page overrides */
+.project-page section.project {
+  background-color: #2b2b2b;
+  padding: 4.8rem 13% 2rem 13%;
+}
+.project-page .project .box-container {
+  gap: 2.5rem;
+}
+@media screen and (max-width: 568px) {
+  .project-page section.project {
+    padding: 1.8rem 2% 6rem 2%;
+  }
+}
+
+/*? back button */
+.project div.back {
+  display: flex;
+  justify-content: center;
+}
+
+.project div.back .btn {
+  padding: 15px;
+  border: 3px solid white;
+  border-radius: 10px;
+  color: white;
+}
+.project div.back .btn:hover {
+  background-color: #0077ff;
+  border: 3px solid #0077ff;
+}
+.project div.back .btn:hover .icon {
+  transform: translateX(-5px);
+}
+
+.project div.back .btn .icon {
+  margin-right: 5px;
+}
+
 /*?======================== Footer start =========================*/
 .footer {
   min-height: auto;

@@ -9,10 +9,10 @@
 
 ## Phase 2: Project Structure
 
-- Simplify folder structure.
-- Centralize project data in JavaScript.
-- Render project cards dynamically.
-- Remove duplicated code and shared assets.
+ - [x] Simplify folder structure.
+ - [x] Centralize project data in JavaScript.
+ - [x] Render project cards dynamically.
+ - [x] Remove duplicated code and shared assets.
 
 ## Phase 3: Modern UI Redesign
 
