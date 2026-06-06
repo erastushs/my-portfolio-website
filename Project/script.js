@@ -2,10 +2,12 @@
 document.addEventListener("visibilitychange", function () {
   if (document.visibilityState === "visible") {
     document.title = "Project | Portfolio Erastus HS";
-    $("#favicon").attr("href", "../assets/img/foto/logo.png");
+    const favicon = document.getElementById("favicon");
+    if (favicon) favicon.setAttribute("href", "../assets/img/foto/logo.png");
   } else {
     document.title = "Welcome to My Portfolio";
-    $("#favicon").attr("href", "../assets/img/foto/favicon.png");
+    const favicon = document.getElementById("favicon");
+    if (favicon) favicon.setAttribute("href", "../assets/img/foto/favicon.png");
   }
 });
 

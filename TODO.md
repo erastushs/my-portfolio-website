@@ -4,6 +4,8 @@
 
 - Remove jQuery and replace with native JavaScript.
 - Replace jQuery scrolling with native smooth scrolling.
+ - [x] Remove jQuery and replace with native JavaScript.
+ - [x] Replace jQuery scrolling with native smooth scrolling.
 - Remove unnecessary dependencies (AOS, Particles.js, Vanilla Tilt).
 - Replace Font Awesome CDN with local SVG icons.
 

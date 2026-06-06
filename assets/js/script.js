@@ -2,10 +2,12 @@
 document.addEventListener("visibilitychange", function () {
   if (document.visibilityState === "visible") {
     document.title = "Portfolio | Erastus HS";
-    $("#favicon").attr("href", "assets/img/foto/logo.png");
+    const favicon = document.getElementById("favicon");
+    if (favicon) favicon.setAttribute("href", "assets/img/foto/logo.png");
   } else {
     document.title = "Welcome to My Portfolio";
-    $("#favicon").attr("href", "assets/img/foto/favicon.png");
+    const favicon = document.getElementById("favicon");
+    if (favicon) favicon.setAttribute("href", "assets/img/foto/favicon.png");
   }
 });
 
@@ -18,8 +20,16 @@ menuToggle.addEventListener("click", function () {
 });
 
 //script toggle navbar aktif
-$(document).on("click", "ul li", function () {
-  $(this).addClass("active").siblings().removeClass("active");
+// toggle active state for nav links (native)
+document.querySelectorAll("nav ul li").forEach((li) => {
+  li.addEventListener("click", function () {
+    // remove .active from all anchors in the same list
+    const parent = li.parentElement;
+    if (!parent) return;
+    parent.querySelectorAll("li a").forEach((a) => a.classList.remove("active"));
+    const link = li.querySelector("a");
+    if (link) link.classList.add("active");
+  });
 });
 
 // scroll spy
@@ -42,16 +52,18 @@ window.onscroll = () => {
   });
 };
 
-// smooth scrolling
-$('a[href*="#"]').on("click", function (e) {
-  e.preventDefault();
-  $("html, body").animate(
-    {
-      scrollTop: $($(this).attr("href")).offset().top - 70,
-    },
-    500,
-    "linear"
-  );
+// smooth scrolling (native)
+document.querySelectorAll('a[href*="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (!href || !href.startsWith('#')) return;
+    const target = document.querySelector(href);
+    if (!target) return;
+    e.preventDefault();
+    const offset = 70; // match previous behavior
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
 });
 
 // typed js vanilla
