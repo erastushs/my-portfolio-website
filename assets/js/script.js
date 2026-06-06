@@ -69,20 +69,6 @@ var projects = [
     demoUrl: "https://my-bookshelfs.netlify.app/",
     githubUrl: "https://github.com/erastushs/My-bookshelf",
     featured: true
-  },
-  {
-    title: "Coming Soon",
-    description: "Coming Soon",
-    image: "/assets/img/Project/coming-soon-thumb.jpg",
-    alt: "coming-soon-thumb",
-    techStack: [
-      { icon: "html5", name: "HTML5", brand: true },
-      { icon: "css3-alt", name: "CSS3", brand: true },
-      { icon: "js-square", name: "JavaScript", brand: true }
-    ],
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: false
   }
 ];
 
@@ -91,19 +77,18 @@ function renderProjects(container, projectList, iconPath) {
   container.innerHTML = projectList.map(function (p) {
     var techHtml = p.techStack.map(function (t) {
       var cls = t.brand ? "icon icon-brand" : "icon";
-      return '<svg class="' + cls + '" aria-hidden="true"><use href="' + iconPath + '#' + t.icon + '"/></svg> ' + t.name;
-    }).join(", ");
+      return '<span class="chip"><svg class="' + cls + '" aria-hidden="true"><use href="' + iconPath + '#' + t.icon + '"/></svg> ' + t.name + '</span>';
+    }).join("");
     return '<div class="box">'
-    + '<img draggable="false" src="' + p.image + '" alt="' + p.alt + '" />'
-    + '<div class="content">'
-    + '<div class="tag"><h3>' + p.title + '</h3></div>'
-    + '<div class="desc">'
-    + '<p>' + p.description + '</p>'
-    + '<p>Build with: ' + techHtml + '</p>'
+    + '<div class="box-img"><img draggable="false" src="' + p.image + '" alt="' + p.alt + '" /></div>'
+    + '<div class="box-body">'
+    + '<h3>' + p.title + '</h3>'
+    + '<p class="desc-text">' + p.description + '</p>'
+    + '<div class="tech-chips">' + techHtml + '</div>'
     + '<div class="btns">'
     + '<a href="' + p.demoUrl + '" class="btn view" target="_blank"><svg class="icon" aria-hidden="true"><use href="' + iconPath + '#eye"/></svg> View</a>'
     + '<a href="' + p.githubUrl + '" class="btn code" target="_blank">Code <svg class="icon" aria-hidden="true"><use href="' + iconPath + '#code"/></svg></a>'
-    + '</div></div></div></div>';
+    + '</div></div></div>';
   }).join("");
 }
 

@@ -24,11 +24,11 @@
 
 ## Phase 4: Project Showcase
 
-- Display key information without hover.
-- Add screenshot, description, tech stack, demo, and source links.
-- Use tech stack chips instead of icon-only labels.
-- Prioritize top projects.
-- Remove placeholder content.
+ - [x] Display key information without hover.
+ - [x] Add screenshot, description, tech stack, demo, and source links.
+ - [x] Use tech stack chips instead of icon-only labels.
+ - [x] Prioritize top projects.
+ - [x] Remove placeholder content.
 
 ## Phase 5: Content Refresh
 

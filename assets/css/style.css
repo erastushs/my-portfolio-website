@@ -568,76 +568,80 @@ nav ul li a:hover {
 .project .box-container .box {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  position: relative;
+  background: var(--clr-bg-medium);
   overflow: hidden;
-  height: 17rem;
 }
 
-.project .box-container .box img {
+.project .box-container .box .box-img {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.project .box-container .box .box-img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: transform var(--transition-normal);
 }
 
-.project .box-container .box .content {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 82%;
-  left: 0;
-  background: var(--clr-overlay);
-  display: flex;
-  flex-direction: column;
-  transition: top var(--transition-normal);
+.project .box-container .box:hover .box-img img {
+  transform: scale(1.03);
 }
 
-.project .box-container .box .content .tag {
-  display: flex;
-  align-items: center;
-  height: 3rem;
-  width: 100%;
-  padding-left: var(--sp-md);
-  background: var(--clr-bg-medium);
+.project .box-container .box .box-body {
+  padding: var(--sp-lg);
 }
 
-.project .box-container .box .content .tag h3 {
+.project .box-container .box .box-body h3 {
   color: var(--clr-text);
-  font-size: 1.2rem;
+  font-size: var(--fs-xl);
   font-weight: var(--fw-semibold);
+  margin-bottom: var(--sp-xs);
 }
 
-.project .box-container .box:hover .content {
-  top: 15%;
-}
-
-.project .desc {
-  margin: var(--sp-md) var(--sp-lg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.project .desc p {
-  color: var(--clr-text);
-  font-size: var(--fs-body);
+.project .box-container .box .box-body .desc-text {
+  color: var(--clr-text-muted);
+  font-size: var(--fs-sm);
   line-height: var(--lh-normal);
+  margin-bottom: var(--sp-md);
 }
 
-.project .desc p + p {
-  margin-top: var(--sp-xs);
+.project .box-container .box .box-body .tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-xs);
+  margin-bottom: var(--sp-md);
 }
 
-.project .desc .btns {
+.project .box-container .box .box-body .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0.2em 0.65em;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--clr-accent);
+  background: rgba(0, 119, 255, 0.12);
+  border: 1px solid rgba(0, 119, 255, 0.25);
+  white-space: nowrap;
+}
+
+.project .box-container .box .box-body .chip .icon {
+  font-size: 0.9em;
+}
+
+.project .box-container .box .box-body .btns {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin-top: var(--sp-md);
-  padding: 0 var(--sp-md);
+  gap: var(--sp-xs);
 }
 
-.project .desc .btns .btn {
+.project .box-container .box .box-body .btns .btn {
   line-height: 0;
-  display: inline;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2xs);
   padding: var(--sp-md) var(--sp-2xl);
   border-radius: var(--radius-sm);
   font-size: var(--fs-body);
@@ -646,15 +650,23 @@ nav ul li a:hover {
   transition: background var(--transition-fast);
 }
 
-.project .desc .btns .btn:hover {
+.project .box-container .box .box-body .btns .btn:hover {
   background: var(--clr-accent);
 }
 
-.project .desc .btns .btn.view:hover .icon {
+.project .box-container .box .box-body .btns .btn.view .icon {
+  transition: transform var(--transition-normal);
+}
+
+.project .box-container .box .box-body .btns .btn.view:hover .icon {
   transform: translateX(-5px);
 }
 
-.project .desc .btns .btn.code:hover .icon {
+.project .box-container .box .box-body .btns .btn.code .icon {
+  transition: transform var(--transition-normal);
+}
+
+.project .box-container .box .box-body .btns .btn.code:hover .icon {
   transform: translateX(5px);
 }
 
@@ -728,7 +740,15 @@ nav ul li a:hover {
     gap: var(--sp-lg);
   }
 
-  .project .desc .btns .btn {
+  .project .box-container .box .box-body {
+    padding: var(--sp-md);
+  }
+
+  .project .box-container .box .box-body h3 {
+    font-size: var(--fs-lg);
+  }
+
+  .project .box-container .box .box-body .btns .btn {
     padding: var(--sp-md);
   }
 }
