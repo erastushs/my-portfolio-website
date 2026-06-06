@@ -251,10 +251,8 @@ document.querySelectorAll('a[href*="#"]').forEach((anchor) => {
 // scroll up pop up
 var scrollTopBtn = document.querySelector(".scroll-top");
 if (scrollTopBtn) {
-  var stOffset = 0;
   window.addEventListener("scroll", function () {
-    var st = window.pageYOffset;
-    if (st > stOffset) {
+    if (window.scrollY > 300) {
       scrollTopBtn.classList.add("active");
     } else {
       scrollTopBtn.classList.remove("active");

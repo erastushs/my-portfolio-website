@@ -16,11 +16,11 @@
 
 ## Phase 3: Modern UI Redesign
 
-- Rebuild hero section with CSS Grid/Flexbox.
-- Improve desktop and mobile layouts.
-- Reduce visual clutter and outdated effects.
-- Introduce a consistent design system with spacing and color tokens.
-- Improve typography hierarchy.
+ - [x] Rebuild hero section with CSS Grid/Flexbox.
+ - [x] Improve desktop and mobile layouts.
+ - [x] Reduce visual clutter and outdated effects.
+ - [x] Introduce a consistent design system with spacing and color tokens.
+ - [x] Improve typography hierarchy.
 
 ## Phase 4: Project Showcase
 
