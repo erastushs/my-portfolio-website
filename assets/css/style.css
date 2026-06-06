@@ -4,6 +4,7 @@
   --clr-bg-medium: #2b2b2b;
   --clr-bg-light: #4e4e4e;
   --clr-accent: #0077ff;
+  --clr-accent-light: #3399ff;
   --clr-accent-overlay: rgba(0, 119, 255, 0.5);
   --clr-text: #ffffff;
   --clr-text-muted: #cccccc;
@@ -237,9 +238,10 @@ nav .logo img {
   box-shadow: 0 0 2px #444;
 }
 
-nav .logo h4 {
+nav .logo .logo-text {
   color: var(--clr-text);
   font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
 }
 
 nav ul {
@@ -259,8 +261,8 @@ nav ul li a {
 
 nav ul li a.active,
 nav ul li a:hover {
-  color: var(--clr-accent);
-  border-bottom: 0.2rem solid var(--clr-accent);
+  color: var(--clr-accent-light);
+  border-bottom: 0.2rem solid var(--clr-accent-light);
 }
 
 /*? hamburger menu */
@@ -372,7 +374,7 @@ nav ul li a:hover {
   max-width: 520px;
 }
 
-.home .content h2 {
+.home .content h1 {
   font-size: clamp(1.8rem, 5vw, var(--fs-hero));
   font-weight: var(--fw-bold);
   line-height: var(--lh-tight);
@@ -387,7 +389,7 @@ nav ul li a:hover {
 }
 
 .home .content .typing-text {
-  color: var(--clr-accent);
+  color: var(--clr-accent-light);
   font-weight: var(--fw-semibold);
 }
 
@@ -830,7 +832,7 @@ nav ul li a:hover {
 
 .footer .box-container .box p .icon {
   padding-right: var(--sp-md);
-  color: var(--clr-accent);
+  color: var(--clr-accent-light);
 }
 
 .footer .box-container .box .share {
@@ -858,7 +860,7 @@ nav ul li a:hover {
   background: transparent;
   transform: scale(0.9);
   border: 0.1rem solid var(--clr-text-muted);
-  color: var(--clr-accent);
+  color: var(--clr-accent-light);
 }
 
 .footer .credit {
@@ -876,7 +878,7 @@ nav ul li a:hover {
 }
 
 .footer .credit a {
-  color: var(--clr-accent);
+  color: var(--clr-accent-light);
 }
 
 .footer .icon-heart {

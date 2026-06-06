@@ -168,9 +168,15 @@ document.addEventListener("DOMContentLoaded", initProjects);
     li.addEventListener("click", function () {
       var parent = li.parentElement;
       if (!parent) return;
-      Array.prototype.forEach.call(parent.querySelectorAll("li a"), function (a) { a.classList.remove("active"); });
+      Array.prototype.forEach.call(parent.querySelectorAll("li a"), function (a) {
+        a.classList.remove("active");
+        a.removeAttribute("aria-current");
+      });
       var link = li.querySelector("a");
-      if (link) link.classList.add("active");
+      if (link) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+      }
     });
   });
 })();
@@ -181,9 +187,15 @@ document.addEventListener("DOMContentLoaded", initProjects);
   if (navLinks.length === 0) return;
 
   function activateLink(id) {
-    Array.prototype.forEach.call(navLinks, function (link) { link.classList.remove("active"); });
+    Array.prototype.forEach.call(navLinks, function (link) {
+      link.classList.remove("active");
+      link.removeAttribute("aria-current");
+    });
     var match = document.querySelector('nav ul li a[href="#' + id + '"]');
-    if (match) match.classList.add("active");
+    if (match) {
+      match.classList.add("active");
+      match.setAttribute("aria-current", "page");
+    }
   }
 
   var sections = document.querySelectorAll("section[id]");
