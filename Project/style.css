@@ -12,6 +12,18 @@ body {
   overflow-x: hidden;
 }
 
+/* base SVG icon styles (replaces Font Awesome) */
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  display: inline-block;
+}
+.icon.icon-brand {
+  vertical-align: middle;
+}
+
 section {
   min-height: 100vh;
   padding: 1.8rem 18%;
@@ -247,10 +259,10 @@ section.project {
   margin-top: 1rem;
   padding: 0 1rem;
 }
-.project .desc .btns .btn.view:hover i {
+.project .desc .btns .btn.view:hover .icon {
   transform: translateX(-5px);
 }
-.project .desc .btns .btn.code:hover i {
+.project .desc .btns .btn.code:hover .icon {
   transform: translateX(5px);
 }
 .project .desc .btns .btn {
@@ -281,11 +293,11 @@ section.project {
   background-color: #0077ff;
   border: 3px solid #0077ff;
 }
-.project div.back .btn:hover i {
+.project div.back .btn:hover .icon {
   transform: translateX(-5px);
 }
 
-.project div.back .btn i {
+.project div.back .btn .icon {
   margin-right: 5px;
 }
 

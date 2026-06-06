@@ -10,11 +10,7 @@
 
 ### Library
 
-- jQuery
-- Particle.JS
-- Tilt-Vanilla.JS
-- AOS
-- Font Awesome.
+- None — uses local SVG icons and vanilla JavaScript.
 
 © 2022 Erastus HS
 

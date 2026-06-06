@@ -15,14 +15,7 @@
       rel="stylesheet"
     />
 
-    <!--? Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <!--? Local SVG icons (replaces Font Awesome CDN) -->
 
     <!--? Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -76,9 +69,8 @@
 
     <!--?======================== Home start ========================= -->
     <section class="home" id="home">
-      <div id="particles-js"></div>
       <div class="foto">
-        <img data-tilt data-tilt-full-page-listening src="assets/img/foto/foto.png" alt="Erastus" />
+        <img src="assets/img/foto/foto.png" alt="Erastus" />
       </div>
       <div class="content">
         <h2>
@@ -101,10 +93,10 @@
     <!--?======================== About start ========================= -->
     <section class="about" id="about">
       <!--? about me start -->
-      <h2 class="heading"><i class="fas fa-user-alt"></i> About Me</h2>
+      <h2 class="heading"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#user"/></svg> About Me</h2>
       <div class="about-me">
         <div class="foto">
-          <img data-tilt src="/assets/img/foto/hero.jpg" alt="Erastus" />
+          <img src="/assets/img/foto/hero.jpg" alt="Erastus" />
         </div>
         <div class="about-desc">
           <p>
@@ -114,7 +106,7 @@
           <a
             href="https://github.com/erastushs/my-portfolio-website/raw/master/assets/Resume-Erastus-Hendro-Setiono.pdf"
             class="cv"
-            ><span>Download CV <i class="fas fa-download"></i></span>
+            ><span>Download CV <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#download"/></svg></span>
           </a>
         </div>
       </div>
@@ -124,52 +116,52 @@
 
     <!--?======================== Skills start ========================= -->
     <section class="skills" id="skills">
-      <h2 class="heading"><i class="fas fa-laptop-code"></i> My Skills</h2>
-      <div class="container">
+      <h2 class="heading"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#laptop-code"/></svg> My Skills</h2>
+          <div class="container">
         <div class="row" id="skillsContainer">
-          <div data-tilt class="bar">
+          <div class="bar">
             <div class="info">
               <img src="/assets/img/logo/html.png" alt="html" />
               <span>HTML5</span>
             </div>
           </div>
-          <div data-tilt class="bar">
+          <div class="bar">
             <div class="info">
               <img src="/assets/img/logo/css.png" alt="css" />
               <span>CSS3</span>
             </div>
           </div>
-          <div data-tilt class="bar">
+          <div class="bar">
             <div class="info">
               <img src="/assets/img/logo/js.png" alt="javascript" />
               <span>JavaScript</span>
             </div>
           </div>
-          <div data-tilt class="bar">
+          <div class="bar">
             <div class="info">
               <img src="/assets/img/logo/github.png" alt="github" />
               <span>GitHub</span>
             </div>
           </div>
-          <div data-tilt class="bar">
+          <div class="bar">
             <div class="info">
               <img src="/assets/img/logo/bootstrap.png" alt="bootstrap" />
               <span>Bootstrap</span>
             </div>
           </div>
-          <div data-tilt class="bar">
+          <div class="bar">
             <div class="info">
               <img src="/assets/img/logo/tailwind.png" alt="tailwind" />
               <span>Tailwind</span>
             </div>
           </div>
-          <!-- <div data-tilt class="bar">
+          <!-- <div class="bar">
             <div class="info">
               <img src="/assets/img/logo/nodejs.png" alt="nodejs" />
               <span>NodeJS</span>
             </div>
           </div> -->
-          <div data-tilt class="bar">
+          <div class="bar">
             <div class="info">
               <img src="/assets/img/logo/photoshop.png" alt="photoshop" />
               <span>Photoshop</span>
@@ -182,7 +174,7 @@
 
     <!--?======================== Project start ========================= -->
     <section class="project" id="project">
-      <h2 class="heading"><i class="fas fa-laptop-code"></i> Project Made</h2>
+      <h2 class="heading"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#laptop-code"/></svg> Project Made</h2>
       <div class="box-container">
         <!--? LuxyHub -->
         <div class="box">
@@ -194,14 +186,13 @@
             <div class="desc">
               <p>Your ultimate destination for Roblox scripts, game tools, and community resources.</p>
               <p>
-                Build with: <i class="fab fa-react"></i> Next.js, <i class="fab fa-js-square"></i> TypeScript,
-                <i class="fab fa-css3-alt"></i> Tailwind, <i class="fas fa-check-circle"></i> ESLint
+                Build with: <svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#react"/></svg> Next.js, <svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#js-square"/></svg> TypeScript,
+                <svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#css3-alt"/></svg> Tailwind, <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check-circle"/></svg> ESLint
               </p>
               <div class="btns">
-                <a href="http://luxyhub.space" class="btn view" target="_blank"><i class="fas fa-eye"></i> View</a>
+                <a href="http://luxyhub.space" class="btn view" target="_blank"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg> View</a>
                 <a href="https://github.com/erastushs/luxy-hub" class="btn code" target="_blank"
-                  >Code <i class="fas fa-code"></i
-                ></a>
+                  >Code <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#code"/></svg></a>
               </div>
             </div>
           </div>
@@ -217,16 +208,15 @@
             <div class="desc">
               <p>Explore Roblox Through Data</p>
               <p>
-                Build with: <i class="fab fa-react"></i> Next.js, <i class="fab fa-js-square"></i> TypeScript,
-                <i class="fab fa-css3-alt"></i> Tailwind, <i class="fas fa-check-circle"></i> ESLint
+                Build with: <svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#react"/></svg> Next.js, <svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#js-square"/></svg> TypeScript,
+                <svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#css3-alt"/></svg> Tailwind, <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check-circle"/></svg> ESLint
               </p>
               <div class="btns">
                 <a href="http://bloxatlas.vercel.app" class="btn view" target="_blank"
-                  ><i class="fas fa-eye"></i> View</a
+                  ><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg> View</a
                 >
                 <a href="https://github.com/erastushs/bloxatlas" class="btn code" target="_blank"
-                  >Code <i class="fas fa-code"></i
-                ></a>
+                  >Code <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#code"/></svg></a>
               </div>
             </div>
           </div>
@@ -242,16 +232,15 @@
             <div class="desc">
               <p>Just simple website for submission on dicoding</p>
               <p>
-                Build with: <i class="fab fa-html5"></i>, <i class="fab fa-css3-alt"></i>,
-                <i class="fab fa-js-square"></i>
+                Build with: <svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#html5"/></svg>, <svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#css3-alt"/></svg>,
+                <svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#js-square"/></svg>
               </p>
               <div class="btns">
                 <a href="https://juiceyoubeta.netlify.app/" class="btn view" target="_blank"
-                  ><i class="fas fa-eye"></i> View</a
+                  ><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg> View</a
                 >
                 <a href="https://github.com/erastushs/website-juice" class="btn code" target="_blank"
-                  >Code <i class="fas fa-code"></i
-                ></a>
+                  >Code <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#code"/></svg></a>
               </div>
             </div>
           </div>
@@ -267,16 +256,15 @@
             <div class="desc">
               <p>Catalog and organize library or book collection on multiple virtual bookshelves</p>
               <p>
-                Build with: <i class="fab fa-html5"></i>, <i class="fab fa-css3-alt"></i>,
-                <i class="fab fa-js-square"></i>
+                Build with: <svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#html5"/></svg>, <svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#css3-alt"/></svg>,
+                <svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#js-square"/></svg>
               </p>
               <div class="btns">
                 <a href="https://my-bookshelfs.netlify.app/" class="btn view" target="_blank"
-                  ><i class="fas fa-eye"></i> View</a
+                  ><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg> View</a
                 >
                 <a href="https://github.com/erastushs/My-bookshelf" class="btn code" target="_blank"
-                  >Code <i class="fas fa-code"></i
-                ></a>
+                  >Code <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#code"/></svg></a>
               </div>
             </div>
           </div>
@@ -288,10 +276,10 @@
         <div>
           <a href="/Project" class="btn more"
             ><span>See more project</span>
-            <i class="fas fa-arrow-right"></i>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow-right"/></svg>
           </a>
           <a href="mailto:erastushs@gmail.com" class="btn email"
-            ><span><i class="fas fa-envelope"></i>Email Me</span>
+            ><span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#envelope"/></svg>Email Me</span>
           </a>
         </div>
       </div>
@@ -308,46 +296,37 @@
 
         <div class="box right">
           <h3>contact info</h3>
-          <p><i class="fas fa-phone"></i>+62 822-4849-1919</p>
-          <p><i class="fas fa-envelope"></i>erastushs@gmail.com</p>
-          <p><i class="fas fa-map-marked-alt"></i>Sentani, Jayapura. Indonesia</p>
+          <p><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"/></svg>+62 822-4849-1919</p>
+          <p><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#envelope"/></svg>erastushs@gmail.com</p>
+          <p><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#map-marker"/></svg>Sentani, Jayapura. Indonesia</p>
           <div class="share">
-            <a href="https://github.com/erastushs" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
-            <a href="mailto:erastushs@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+            <a href="https://github.com/erastushs" class="share-icon" aria-label="GitHub" target="_blank"><svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#github"/></svg></a>
+            <a href="mailto:erastushs@gmail.com" class="share-icon" aria-label="Mail" target="_blank"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#envelope"/></svg></a>
             <a
               href="https://instagram.com/erastus_hs"
-              class="fab fa-instagram"
-              aria-label="instagram"
+              class="share-icon" aria-label="instagram"
               target="_blank"
-            ></a>
+            ><svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#instagram"/></svg></a>
             <a
               href="https://www.linkedin.com/in/erastushs/"
-              class="fab fa-linkedin"
-              aria-label="linkedin"
+              class="share-icon" aria-label="linkedin"
               target="_blank"
-            ></a>
+            ><svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#linkedin"/></svg></a>
           </div>
         </div>
       </div>
 
       <h1 class="credit">
-        Made with <i class="fa fa-heart pulse"></i> by <a href="https://github.com/erastushs"> Erastus H.S</a>
+        Made with <svg class="icon icon-heart pulse" aria-hidden="true"><use href="assets/icons.svg#heart"/></svg> by <a href="https://github.com/erastushs"> Erastus H.S</a>
       </h1>
     </footer>
     <!--?======================== Footer end ========================= -->
 
     <!--?======================== Scroll Up ========================= -->
-    <a href="#home" aria-label="ScrollTop" class="fas fa-arrow-up" id="scroll-top"></a>
+    <a href="#home" aria-label="ScrollTop" class="scroll-top" id="scroll-top"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow-up"/></svg></a>
     <!--?======================== Scroll Up ========================= -->
 
     <!-- jQuery removed (replaced with native JS) -->
-
-    <!--? particle.js -->
-    <script src="/assets/js/particles.min.js"></script>
-    <script src="/assets/js/app.js"></script>
-
-    <!--? Tilt-Vannila.js -->
-    <script src="assets/js/vanilla-tilt.min.js"></script>
 
     <!--? Main JavaScript -->
     <script src="assets/js/script.js"></script>
