@@ -4,26 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0f1115" />
-    <meta name="keywords" content="ErastusHS, Erastus, frontend developer, projects, portfolio" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta name="keywords" content="ErastusHS, Erastus, software developer, projects, portfolio" />
     <meta name="author" content="Erastus HS" />
-    <meta name="description" content="Projects by Erastus Hendro Setiono — Front-end developer based in Indonesia. View all portfolio projects." />
-    <title>Projects | Erastus HS</title>
+    <meta name="description" content="All projects by Erastus Hendro Setiono — Software Developer & Product Builder based in Indonesia." />
+    <title>All Projects | Erastus HS</title>
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://erastushs.netlify.app/Project/" />
-    <meta property="og:title" content="Projects | Erastus HS" />
-    <meta property="og:description" content="Projects by Erastus Hendro Setiono — Front-end developer based in Indonesia. View all portfolio projects." />
+    <meta property="og:title" content="All Projects | Erastus HS" />
+    <meta property="og:description" content="All projects by Erastus Hendro Setiono — Software Developer & Product Builder." />
     <meta property="og:image" content="https://erastushs.netlify.app/assets/img/foto/logo.png" />
     <meta property="og:image:width" content="512" />
     <meta property="og:image:height" content="512" />
-    <meta property="og:site_name" content="Erastus HS Portfolio" />
+    <meta property="og:site_name" content="Erastus HS" />
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content="https://erastushs.netlify.app/Project/" />
-    <meta name="twitter:title" content="Projects | Erastus HS" />
-    <meta name="twitter:description" content="Projects by Erastus Hendro Setiono — Front-end developer based in Indonesia. View all portfolio projects." />
+    <meta name="twitter:title" content="All Projects | Erastus HS" />
+    <meta name="twitter:description" content="All projects by Erastus Hendro Setiono — Software Developer & Product Builder." />
     <meta name="twitter:image" content="https://erastushs.netlify.app/assets/img/foto/logo.png" />
 
     <link rel="canonical" href="https://erastushs.netlify.app/Project/" />
@@ -41,16 +40,16 @@
     <header class="navbar">
       <div class="navbar-inner">
         <a href="../index.html" class="nav-logo" aria-label="Erastus HS Home">
-          <img src="../assets/img/foto/logo.png" alt="" width="40" height="40" />
+          <img src="../assets/img/foto/logo.png" alt="" width="32" height="32" />
           <span>Erastus HS</span>
         </a>
 
         <nav aria-label="Main navigation">
           <ul class="nav-links" id="nav-menu">
-            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#focus">Focus</a></li>
             <li><a href="../index.html#about">About</a></li>
             <li><a href="../index.html#skills">Skills</a></li>
-            <li><a class="active" href="#projects">Projects</a></li>
             <li><a href="../index.html#contact">Contact</a></li>
           </ul>
         </nav>
@@ -69,29 +68,36 @@
     </header>
 
     <main id="main">
-      <section class="projects section" id="projects">
+      <section class="section" id="projects">
         <div class="container">
-          <h2 class="section-title">All Projects</h2>
+          <div class="section-header">
+            <span class="section-label">Work</span>
+            <h2 class="section-title">All Projects</h2>
+          </div>
+
           <div class="projects-grid">
 
             <div class="project-card">
               <div class="project-img">
-                <img src="../assets/img/Project/luxyhub.webp" alt="LuxyHub Roblox scripts platform" width="1918" height="895" loading="lazy" decoding="async" />
+                <img src="../assets/img/Project/luxyhub.webp" alt="LuxyHub platform" width="1918" height="895" loading="lazy" decoding="async" />
               </div>
               <div class="project-body">
-                <h3>LuxyHub</h3>
-                <p>Your ultimate destination for Roblox scripts, game tools, and community resources.</p>
+                <div class="project-header">
+                  <h3>LuxyHub</h3>
+                  <span class="status status-active">Active</span>
+                </div>
+                <p>Roblox scripts, game tools, and community resources platform.</p>
                 <div class="project-tags">
                   <span class="tag">Next.js</span>
                   <span class="tag">TypeScript</span>
                   <span class="tag">Tailwind</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://luxyhub.space" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                  <a href="https://luxyhub.space" class="btn-link" target="_blank" rel="noopener noreferrer">
                     <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#eye"/></svg>
                     Live Demo
                   </a>
-                  <a href="https://github.com/erastushs/luxy-hub" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/erastushs/luxy-hub" class="btn-link" target="_blank" rel="noopener noreferrer">
                     <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#code"/></svg>
                     Source
                   </a>
@@ -101,10 +107,13 @@
 
             <div class="project-card">
               <div class="project-img">
-                <img src="../assets/img/Project/bloxatlas.webp" alt="BloxAtlas Roblox data explorer" width="1918" height="895" loading="lazy" decoding="async" />
+                <img src="../assets/img/Project/bloxatlas.webp" alt="BloxAtlas data explorer" width="1918" height="895" loading="lazy" decoding="async" />
               </div>
               <div class="project-body">
-                <h3>BloxAtlas</h3>
+                <div class="project-header">
+                  <h3>BloxAtlas</h3>
+                  <span class="status status-active">Active</span>
+                </div>
                 <p>Explore Roblox Through Data</p>
                 <div class="project-tags">
                   <span class="tag">Next.js</span>
@@ -112,11 +121,11 @@
                   <span class="tag">Tailwind</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://bloxatlas.vercel.app" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                  <a href="https://bloxatlas.vercel.app" class="btn-link" target="_blank" rel="noopener noreferrer">
                     <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#eye"/></svg>
                     Live Demo
                   </a>
-                  <a href="https://github.com/erastushs/bloxatlas" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/erastushs/bloxatlas" class="btn-link" target="_blank" rel="noopener noreferrer">
                     <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#code"/></svg>
                     Source
                   </a>
@@ -126,20 +135,23 @@
 
             <div class="project-card">
               <div class="project-img">
-                <img src="../assets/img/Project/discord-thumb.webp" alt="Discord bot dashboard" width="682" height="384" loading="lazy" decoding="async" />
+                <img src="../assets/img/Project/discord-thumb.webp" alt="Discord bot" width="682" height="384" loading="lazy" decoding="async" />
               </div>
               <div class="project-body">
-                <h3>Discord Bot</h3>
-                <p>Personal Discord bot for my server.</p>
+                <div class="project-header">
+                  <h3>Hoak Bot</h3>
+                  <span class="status status-completed">Completed</span>
+                </div>
+                <p>Personal Discord bot for my server with custom utilities.</p>
                 <div class="project-tags">
                   <span class="tag">Node.js</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://discord.io/HoakFamily" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                  <a href="https://discord.io/HoakFamily" class="btn-link" target="_blank" rel="noopener noreferrer">
                     <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#eye"/></svg>
                     Live Demo
                   </a>
-                  <a href="https://github.com/erastushs/hoak-bot" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/erastushs/hoak-bot" class="btn-link" target="_blank" rel="noopener noreferrer">
                     <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#code"/></svg>
                     Source
                   </a>
@@ -149,22 +161,25 @@
 
             <div class="project-card">
               <div class="project-img">
-                <img src="../assets/img/Project/website-juice.webp" alt="Juice You website homepage" width="1920" height="1080" loading="lazy" decoding="async" />
+                <img src="../assets/img/Project/website-juice.webp" alt="Juice You website" width="1920" height="1080" loading="lazy" decoding="async" />
               </div>
               <div class="project-body">
-                <h3>Website Juice You</h3>
-                <p>Simple responsive website built as a submission project.</p>
+                <div class="project-header">
+                  <h3>Website Juice You</h3>
+                  <span class="status status-completed">Completed</span>
+                </div>
+                <p>Responsive web platform for juice ordering and discovery.</p>
                 <div class="project-tags">
                   <span class="tag">HTML</span>
                   <span class="tag">CSS</span>
                   <span class="tag">JavaScript</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://juiceyoubeta.netlify.app/" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                  <a href="https://juiceyoubeta.netlify.app/" class="btn-link" target="_blank" rel="noopener noreferrer">
                     <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#eye"/></svg>
                     Live Demo
                   </a>
-                  <a href="https://github.com/erastushs/website-juice" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/erastushs/website-juice" class="btn-link" target="_blank" rel="noopener noreferrer">
                     <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#code"/></svg>
                     Source
                   </a>
@@ -174,22 +189,25 @@
 
             <div class="project-card">
               <div class="project-img">
-                <img src="../assets/img/Project/my-bookshelfs.webp" alt="My Bookshelfs catalog app" width="1920" height="931" loading="lazy" decoding="async" />
+                <img src="../assets/img/Project/my-bookshelfs.webp" alt="My Bookshelfs app" width="1920" height="931" loading="lazy" decoding="async" />
               </div>
               <div class="project-body">
-                <h3>My Bookshelfs</h3>
-                <p>Catalog and organize your book collection on multiple virtual bookshelves.</p>
+                <div class="project-header">
+                  <h3>My Bookshelfs</h3>
+                  <span class="status status-completed">Completed</span>
+                </div>
+                <p>Catalog and organize book collections on virtual bookshelves.</p>
                 <div class="project-tags">
                   <span class="tag">HTML</span>
                   <span class="tag">CSS</span>
                   <span class="tag">JavaScript</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://my-bookshelfs.netlify.app/" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                  <a href="https://my-bookshelfs.netlify.app/" class="btn-link" target="_blank" rel="noopener noreferrer">
                     <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#eye"/></svg>
                     Live Demo
                   </a>
-                  <a href="https://github.com/erastushs/My-bookshelf" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/erastushs/My-bookshelf" class="btn-link" target="_blank" rel="noopener noreferrer">
                     <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#code"/></svg>
                     Source
                   </a>
@@ -210,7 +228,7 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
+      <div class="footer-inner">
         <div class="footer-links">
           <a href="https://github.com/erastushs" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
             <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#github"/></svg>
@@ -225,7 +243,7 @@
             <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#envelope"/></svg>
           </a>
         </div>
-        <p class="footer-text">&copy; 2026 Erastus HS &mdash; Built with vanilla HTML, CSS &amp; JavaScript.</p>
+        <p class="footer-text">&copy; 2026 Erastus HS<br />Building web platforms, developer tools, and digital products.<br />Built with Vanilla HTML, CSS, and JavaScript.</p>
       </div>
     </footer>
 
