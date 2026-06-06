@@ -47,11 +47,11 @@
 
 ## Phase 7: Performance
 
-- Enable lazy loading.
-- Prevent layout shifts with image dimensions.
-- Optimize images using WebP/AVIF.
-- Remove unused assets and libraries.
-- Improve first-load performance.
+- [x] Enable lazy loading.
+- [x] Prevent layout shifts with image dimensions.
+- [x] Optimize images using WebP/AVIF.
+- [x] Remove unused assets and libraries.
+- [x] Improve first-load performance.
 
 ## Phase 8: SEO & Sharing
 

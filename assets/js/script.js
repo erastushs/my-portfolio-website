@@ -3,7 +3,7 @@ var projects = [
   {
     title: "LuxyHub",
     description: "Your ultimate destination for Roblox scripts, game tools, and community resources.",
-    image: "/assets/img/Project/luxyhub.png",
+    image: "/assets/img/Project/luxyhub.webp",
     alt: "luxyhub",
     techStack: [
       { icon: "react", name: "Next.js", brand: true },
@@ -13,12 +13,14 @@ var projects = [
     ],
     demoUrl: "http://luxyhub.space",
     githubUrl: "https://github.com/erastushs/luxy-hub",
+    width: 1918,
+    height: 895,
     featured: true
   },
   {
     title: "BloxAtlas",
     description: "Explore Roblox Through Data",
-    image: "/assets/img/Project/bloxatlas.png",
+    image: "/assets/img/Project/bloxatlas.webp",
     alt: "bloxatlas",
     techStack: [
       { icon: "react", name: "Next.js", brand: true },
@@ -28,24 +30,28 @@ var projects = [
     ],
     demoUrl: "http://bloxatlas.vercel.app",
     githubUrl: "https://github.com/erastushs/bloxatlas",
+    width: 1918,
+    height: 895,
     featured: true
   },
   {
     title: "Discord Bot",
     description: "Personal discord bot for my server discord",
-    image: "/assets/img/Project/discord-thumb.jpg",
+    image: "/assets/img/Project/discord-thumb.webp",
     alt: "discord",
     techStack: [
       { icon: "node-js", name: "Node.js", brand: true }
     ],
     demoUrl: "http://discord.io/HoakFamily",
     githubUrl: "https://github.com/erastushs/hoak-bot",
+    width: 682,
+    height: 384,
     featured: false
   },
   {
     title: "Website Juice you",
     description: "Just simple website for submission on dicoding",
-    image: "/assets/img/Project/website-juice.jpg",
+    image: "/assets/img/Project/website-juice.webp",
     alt: "JuiceYou-Project",
     techStack: [
       { icon: "html5", name: "HTML5", brand: true },
@@ -54,12 +60,14 @@ var projects = [
     ],
     demoUrl: "https://juiceyoubeta.netlify.app/",
     githubUrl: "https://github.com/erastushs/website-juice",
+    width: 1920,
+    height: 1080,
     featured: true
   },
   {
     title: "Website My Bookshelfs",
     description: "Catalog and organize library or book collection on multiple virtual bookshelves",
-    image: "/assets/img/Project/my-bookshelfs.jpg",
+    image: "/assets/img/Project/my-bookshelfs.webp",
     alt: "my-bookshelfs-project",
     techStack: [
       { icon: "html5", name: "HTML5", brand: true },
@@ -68,6 +76,8 @@ var projects = [
     ],
     demoUrl: "https://my-bookshelfs.netlify.app/",
     githubUrl: "https://github.com/erastushs/My-bookshelf",
+    width: 1920,
+    height: 931,
     featured: true
   }
 ];
@@ -79,8 +89,10 @@ function renderProjects(container, projectList, iconPath) {
       var cls = t.brand ? "icon icon-brand" : "icon";
       return '<span class="chip"><svg class="' + cls + '" aria-hidden="true"><use href="' + iconPath + '#' + t.icon + '"/></svg> ' + t.name + '</span>';
     }).join("");
+    var widthAttr = p.width ? ' width="' + p.width + '"' : '';
+    var heightAttr = p.height ? ' height="' + p.height + '"' : '';
     return '<div class="box">'
-    + '<div class="box-img"><img draggable="false" src="' + p.image + '" alt="' + p.alt + ' project screenshot" /></div>'
+    + '<div class="box-img"><img draggable="false" src="' + p.image + '" alt="' + p.alt + ' project screenshot"' + widthAttr + heightAttr + ' loading="lazy" decoding="async" /></div>'
     + '<div class="box-body">'
     + '<h3>' + p.title + '</h3>'
     + '<p class="desc-text">' + p.description + '</p>'
