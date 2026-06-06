@@ -98,8 +98,8 @@ function renderProjects(container, projectList, iconPath) {
     + '<p class="desc-text">' + p.description + '</p>'
     + '<div class="tech-chips">' + techHtml + '</div>'
     + '<div class="btns">'
-    + '<a href="' + p.demoUrl + '" class="btn view" target="_blank"><svg class="icon" aria-hidden="true"><use href="' + iconPath + '#eye"/></svg> View</a>'
-    + '<a href="' + p.githubUrl + '" class="btn code" target="_blank">Code <svg class="icon" aria-hidden="true"><use href="' + iconPath + '#code"/></svg></a>'
+    + '<a href="' + p.demoUrl + '" class="btn view" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="' + iconPath + '#eye"/></svg> View</a>'
+    + '<a href="' + p.githubUrl + '" class="btn code" target="_blank" rel="noopener noreferrer">Code <svg class="icon" aria-hidden="true"><use href="' + iconPath + '#code"/></svg></a>'
     + '</div></div></div>';
   }).join("");
 }

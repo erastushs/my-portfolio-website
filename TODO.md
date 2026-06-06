@@ -55,10 +55,10 @@
 
 ## Phase 8: SEO & Sharing
 
-- Improve metadata and descriptions.
-- Add Open Graph and Twitter cards.
-- Configure canonical URLs.
-- Ensure secure external links.
+- [x] Improve metadata and descriptions.
+- [x] Add Open Graph and Twitter cards.
+- [x] Configure canonical URLs.
+- [x] Ensure secure external links.
 
 ## Phase 9: Code Quality
 
