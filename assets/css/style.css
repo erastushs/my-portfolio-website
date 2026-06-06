@@ -83,6 +83,15 @@ input:focus-visible,
   outline-offset: 2px;
 }
 
+/*? shared patterns */
+.icon-hover .icon {
+  transition: transform var(--transition-normal);
+}
+
+.icon-hover:hover .icon {
+  transform: translateX(4px);
+}
+
 .skip-link {
   position: absolute;
   top: -100%;
@@ -410,14 +419,6 @@ nav ul li a:hover {
   background: var(--clr-accent);
 }
 
-.home .content .btn .icon {
-  transition: transform var(--transition-normal);
-}
-
-.home .content .btn:hover .icon {
-  transform: translateX(4px);
-}
-
 /*? hero responsive */
 @media screen and (max-width: 968px) {
   .home {
@@ -490,17 +491,9 @@ nav ul li a:hover {
   transition: background var(--transition-fast), color var(--transition-fast);
 }
 
-.about .about-me .about-desc .cv .icon {
-  transition: transform var(--transition-normal);
-}
-
 .about .about-me .about-desc .cv:hover {
   color: var(--clr-text);
   background: var(--clr-accent);
-}
-
-.about .about-me .about-desc .cv:hover .icon {
-  transform: translateX(4px);
 }
 
 @media screen and (max-width: 968px) {
@@ -529,7 +522,7 @@ nav ul li a:hover {
 
 .skills .container .row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: var(--sp-xl);
 }
 
@@ -562,19 +555,12 @@ nav ul li a:hover {
   font-weight: var(--fw-medium);
 }
 
-@media screen and (max-width: 968px) {
-  .skills .container .row {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 @media screen and (max-width: 568px) {
   .skills .container {
     padding: 0;
   }
 
   .skills .container .row {
-    grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-md);
     margin: var(--sp-md);
     padding: var(--sp-2xl) var(--sp-2xs);
@@ -618,7 +604,7 @@ nav ul li a:hover {
 
 .project .box-container .box .box-body h3 {
   color: var(--clr-text);
-  font-size: var(--fs-xl);
+  font-size: clamp(var(--fs-lg), 4vw, var(--fs-xl));
   font-weight: var(--fw-semibold);
   margin-bottom: var(--sp-xs);
 }
@@ -678,16 +664,8 @@ nav ul li a:hover {
   background: var(--clr-accent);
 }
 
-.project .box-container .box .box-body .btns .btn.view .icon {
-  transition: transform var(--transition-normal);
-}
-
 .project .box-container .box .box-body .btns .btn.view:hover .icon {
   transform: translateX(-5px);
-}
-
-.project .box-container .box .box-body .btns .btn.code .icon {
-  transition: transform var(--transition-normal);
 }
 
 .project .box-container .box .box-body .btns .btn.code:hover .icon {
@@ -738,7 +716,6 @@ nav ul li a:hover {
 
 .project .viewall .btn .icon {
   margin: 0 var(--sp-2xs);
-  transition: transform var(--transition-normal);
 }
 
 .project .viewall .btn:hover .icon {
@@ -766,10 +743,6 @@ nav ul li a:hover {
 
   .project .box-container .box .box-body {
     padding: var(--sp-md);
-  }
-
-  .project .box-container .box .box-body h3 {
-    font-size: var(--fs-lg);
   }
 
   .project .box-container .box .box-body .btns .btn {
@@ -925,7 +898,7 @@ nav ul li a:hover {
   }
 }
 
-@media (max-width: 568px) {
+@media screen and (max-width: 568px) {
   .footer {
     min-height: 72vh;
     padding: var(--sp-xl) var(--sp-md);
@@ -970,7 +943,7 @@ nav ul li a:hover {
   bottom: 2rem;
 }
 
-@media (max-width: 968px) {
+@media screen and (max-width: 968px) {
   .scroll-top {
     bottom: -80px;
   }

@@ -62,11 +62,11 @@
 
 ## Phase 9: Code Quality
 
-- Simplify CSS architecture.
-- Remove duplicated styles.
-- Improve responsive layouts with Grid and Clamp.
-- Refactor JavaScript into modular functions.
-- Use Intersection Observer where appropriate.
+- [x] Simplify CSS architecture.
+- [x] Remove duplicated styles.
+- [x] Improve responsive layouts with Grid and Clamp.
+- [x] Refactor JavaScript into modular functions.
+- [x] Use Intersection Observer where appropriate.
 
 ## Phase 10: Documentation & Testing
 

@@ -1,4 +1,11 @@
-// Project data
+'use strict';
+
+// ========================= Constants =========================
+var SCROLL_OFFSET_PX = 250;
+var PRELOADER_DELAY_MS = 300;
+var TYPING_PERIOD_MS = 1000;
+
+// ========================= Project Data =========================
 var projects = [
   {
     title: "LuxyHub",
@@ -82,6 +89,7 @@ var projects = [
   }
 ];
 
+// ========================= Project Rendering =========================
 function renderProjects(container, projectList, iconPath) {
   if (!container) return;
   container.innerHTML = projectList.map(function (p) {
@@ -98,8 +106,8 @@ function renderProjects(container, projectList, iconPath) {
     + '<p class="desc-text">' + p.description + '</p>'
     + '<div class="tech-chips">' + techHtml + '</div>'
     + '<div class="btns">'
-    + '<a href="' + p.demoUrl + '" class="btn view" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="' + iconPath + '#eye"/></svg> View</a>'
-    + '<a href="' + p.githubUrl + '" class="btn code" target="_blank" rel="noopener noreferrer">Code <svg class="icon" aria-hidden="true"><use href="' + iconPath + '#code"/></svg></a>'
+    + '<a href="' + p.demoUrl + '" class="btn view icon-hover" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="' + iconPath + '#eye"/></svg> View</a>'
+    + '<a href="' + p.githubUrl + '" class="btn code icon-hover" target="_blank" rel="noopener noreferrer">Code <svg class="icon" aria-hidden="true"><use href="' + iconPath + '#code"/></svg></a>'
     + '</div></div></div>';
   }).join("");
 }
@@ -115,172 +123,189 @@ function initProjects() {
 
 document.addEventListener("DOMContentLoaded", initProjects);
 
-// Favicon
-document.addEventListener("visibilitychange", function () {
+// ========================= Favicon and Title Switcher =========================
+(function () {
   var isProjectPage = window.location.pathname.indexOf("/Project/") !== -1;
   var favicon = document.getElementById("favicon");
-  if (document.visibilityState === "visible") {
-    document.title = isProjectPage ? "Project | Portfolio Erastus HS" : "Portfolio | Erastus HS";
-    if (favicon) favicon.setAttribute("href", isProjectPage ? "../assets/img/foto/logo.png" : "assets/img/foto/logo.png");
-  } else {
-    document.title = "Welcome to My Portfolio";
-    if (favicon) favicon.setAttribute("href", isProjectPage ? "../assets/img/foto/favicon.png" : "assets/img/foto/favicon.png");
-  }
-});
+  var defaultTitle = isProjectPage ? "Project | Portfolio Erastus HS" : "Erastus HS — Front-End Developer Portfolio";
+  var awayTitle = "Welcome to My Portfolio";
+  var defaultIcon = isProjectPage ? "../assets/img/foto/logo.png" : "assets/img/foto/logo.png";
+  var awayIcon = isProjectPage ? "../assets/img/foto/favicon.png" : "assets/img/foto/favicon.png";
 
-// script hamburger untuk mobile responsive
-var menuToggle = document.querySelector(".menu-toggle input");
-var nav = document.querySelector("nav ul");
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible") {
+      document.title = defaultTitle;
+      if (favicon) favicon.setAttribute("href", defaultIcon);
+    } else {
+      document.title = awayTitle;
+      if (favicon) favicon.setAttribute("href", awayIcon);
+    }
+  });
+})();
 
-if (menuToggle) {
+// ========================= Navigation =========================
+(function () {
+  var menuToggle = document.querySelector(".menu-toggle input");
+  var nav = document.querySelector("nav ul");
+  if (!menuToggle || !nav) return;
+
   menuToggle.addEventListener("click", function () {
     nav.classList.toggle("slide");
     var expanded = nav.classList.contains("slide");
     menuToggle.setAttribute("aria-expanded", expanded ? "true" : "false");
   });
-}
 
-// close mobile menu on Escape key
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && nav && nav.classList.contains("slide")) {
-    nav.classList.remove("slide");
-    if (menuToggle) {
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && nav.classList.contains("slide")) {
+      nav.classList.remove("slide");
       menuToggle.checked = false;
       menuToggle.setAttribute("aria-expanded", "false");
     }
-  }
-});
-
-//script toggle navbar aktif
-// toggle active state for nav links (native)
-document.querySelectorAll("nav ul li").forEach((li) => {
-  li.addEventListener("click", function () {
-    // remove .active from all anchors in the same list
-    const parent = li.parentElement;
-    if (!parent) return;
-    parent.querySelectorAll("li a").forEach((a) => a.classList.remove("active"));
-    const link = li.querySelector("a");
-    if (link) link.classList.add("active");
   });
-});
 
-// scroll spy
-var sections = document.querySelectorAll("section");
-var navLinks = document.querySelectorAll("ul li a");
-
-window.onscroll = function () {
-  sections.forEach(function (sec) {
-    var top = window.scrollY;
-    var offset = sec.offsetTop - 250;
-    var height = sec.offsetHeight;
-    var id = sec.getAttribute("id");
-
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach(function (links) {
-        links.classList.remove("active");
-      });
-      var match = document.querySelector("ul li a[href*=" + id + "]");
-      if (match) match.classList.add("active");
-    }
-  });
-};
-
-// smooth scrolling (native)
-document.querySelectorAll('a[href*="#"]').forEach((anchor) => {
-  anchor.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    if (!href || !href.startsWith('#')) return;
-    const target = document.querySelector(href);
-    if (!target) return;
-    e.preventDefault();
-    const offset = 70; // match previous behavior
-    const top = target.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({ top, behavior: 'smooth' });
-  });
-});
-
-// typed js vanilla
-(function () {
-  let dataTyping = {
-    target: "typing-text",
-    text: '["frontend development", "Next.js", "TypeScript", "web development"]',
-    delay: "1000",
-  };
-
-  class TextType {
-    constructor(el, text, delay) {
-      this.text = text;
-      this.el = el;
-      this.loopNum = 0;
-      this.period = parseInt(delay, 10) || 2000;
-      this.txt = "";
-      this.isDeleting = false;
-      this.tick();
-    }
-    tick() {
-      let i = this.loopNum % this.text.length;
-      let fullTxt = this.text[i];
-
-      if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-      } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-      }
-
-      this.el.innerText = this.txt;
-
-      let timing = Math.floor(200 - Math.random() * 100);
-
-      if (this.isDeleting) {
-        timing /= 2;
-      }
-
-      if (!this.isDeleting && this.txt === fullTxt) {
-        timing = this.period;
-        this.isDeleting = true;
-      } else if (this.isDeleting && this.txt === "") {
-        this.isDeleting = false;
-        this.loopNum++;
-        timing = 500;
-      }
-
-      setTimeout(() => this.tick(), timing);
-    }
-  }
-
-  window.addEventListener("load", function () {
-    let words = dataTyping.text ? JSON.parse(dataTyping.text) : null;
-    if (!words) return;
-    let el = document.getElementsByClassName(dataTyping.target);
-    for (let i = 0; i < el.length; i++) {
-      new TextType(el[i], words, dataTyping.delay);
-    }
+  var navAnchors = nav.querySelectorAll("li");
+  Array.prototype.forEach.call(navAnchors, function (li) {
+    li.addEventListener("click", function () {
+      var parent = li.parentElement;
+      if (!parent) return;
+      Array.prototype.forEach.call(parent.querySelectorAll("li a"), function (a) { a.classList.remove("active"); });
+      var link = li.querySelector("a");
+      if (link) link.classList.add("active");
+    });
   });
 })();
 
-// scroll up pop up
-var scrollTopBtn = document.querySelector(".scroll-top");
-if (scrollTopBtn) {
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
-      scrollTopBtn.classList.add("active");
-    } else {
-      scrollTopBtn.classList.remove("active");
-    }
-  });
-}
+// ========================= Scroll Spy (Intersection Observer) =========================
+(function () {
+  var navLinks = document.querySelectorAll("nav ul li a");
+  if (navLinks.length === 0) return;
 
-// script preloader
-var preload = document.querySelector("#preloader");
-if (preload) {
-  var preloadDelay = 300;
-  var body = document.querySelector("body");
+  function activateLink(id) {
+    Array.prototype.forEach.call(navLinks, function (link) { link.classList.remove("active"); });
+    var match = document.querySelector('nav ul li a[href="#' + id + '"]');
+    if (match) match.classList.add("active");
+  }
+
+  var sections = document.querySelectorAll("section[id]");
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        activateLink(entry.target.id);
+      }
+    });
+  }, {
+    rootMargin: "-" + SCROLL_OFFSET_PX + "px 0px 0px 0px",
+    threshold: 0
+  });
+
+  Array.prototype.forEach.call(sections, function (section) {
+    observer.observe(section);
+  });
+})();
+
+// ========================= Smooth Scrolling =========================
+(function () {
+  var anchors = document.querySelectorAll('a[href*="#"]');
+  Array.prototype.forEach.call(anchors, function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var href = anchor.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
+      var target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.scrollY - 70;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+})();
+
+// ========================= Typing Effect =========================
+(function () {
+  var words = ["frontend development", "Next.js", "TypeScript", "web development"];
+
+  function TextType(el, text, delay) {
+    this.text = text;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(delay, 10) || TYPING_PERIOD_MS;
+    this.txt = "";
+    this.isDeleting = false;
+    this.tick();
+  }
+
+  TextType.prototype.tick = function () {
+    var i = this.loopNum % this.text.length;
+    var fullTxt = this.text[i];
+
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerText = this.txt;
+
+    var timing = Math.floor(200 - Math.random() * 100);
+
+    if (this.isDeleting) {
+      timing /= 2;
+    }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      timing = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === "") {
+      this.isDeleting = false;
+      this.loopNum++;
+      timing = 500;
+    }
+
+    var self = this;
+    setTimeout(function () { self.tick(); }, timing);
+  };
+
+  window.addEventListener("load", function () {
+    var els = document.getElementsByClassName("typing-text");
+    Array.prototype.forEach.call(els, function (el) {
+      new TextType(el, words, TYPING_PERIOD_MS);
+    });
+  });
+})();
+
+// ========================= Scroll-to-Top (Intersection Observer) =========================
+(function () {
+  var scrollTopBtn = document.querySelector(".scroll-top");
+  if (!scrollTopBtn) return;
+
+  var sentinel = document.createElement("div");
+  sentinel.style.position = "absolute";
+  sentinel.style.top = "0";
+  sentinel.style.height = "1px";
+  sentinel.style.width = "1px";
+  sentinel.style.pointerEvents = "none";
+  document.body.prepend(sentinel);
+
+  var observer = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) {
+      scrollTopBtn.classList.remove("active");
+    } else {
+      scrollTopBtn.classList.add("active");
+    }
+  }, { threshold: 0 });
+
+  observer.observe(sentinel);
+})();
+
+// ========================= Preloader =========================
+(function () {
+  var preload = document.getElementById("preloader");
+  if (!preload) return;
 
   window.addEventListener("load", function () {
     setTimeout(function () {
       preload.classList.add("hidden");
       preload.setAttribute("aria-hidden", "true");
-      body.classList.remove("hidden");
-    }, preloadDelay);
+      document.body.classList.remove("hidden");
+    }, PRELOADER_DELAY_MS);
   });
-}
+})();
