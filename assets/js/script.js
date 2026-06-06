@@ -80,7 +80,7 @@ function renderProjects(container, projectList, iconPath) {
       return '<span class="chip"><svg class="' + cls + '" aria-hidden="true"><use href="' + iconPath + '#' + t.icon + '"/></svg> ' + t.name + '</span>';
     }).join("");
     return '<div class="box">'
-    + '<div class="box-img"><img draggable="false" src="' + p.image + '" alt="' + p.alt + '" /></div>'
+    + '<div class="box-img"><img draggable="false" src="' + p.image + '" alt="' + p.alt + ' project screenshot" /></div>'
     + '<div class="box-body">'
     + '<h3>' + p.title + '</h3>'
     + '<p class="desc-text">' + p.description + '</p>'
@@ -123,8 +123,21 @@ var nav = document.querySelector("nav ul");
 if (menuToggle) {
   menuToggle.addEventListener("click", function () {
     nav.classList.toggle("slide");
+    var expanded = nav.classList.contains("slide");
+    menuToggle.setAttribute("aria-expanded", expanded ? "true" : "false");
   });
 }
+
+// close mobile menu on Escape key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && nav && nav.classList.contains("slide")) {
+    nav.classList.remove("slide");
+    if (menuToggle) {
+      menuToggle.checked = false;
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
+  }
+});
 
 //script toggle navbar aktif
 // toggle active state for nav links (native)
@@ -254,6 +267,7 @@ if (preload) {
   window.addEventListener("load", function () {
     setTimeout(function () {
       preload.classList.add("hidden");
+      preload.setAttribute("aria-hidden", "true");
       body.classList.remove("hidden");
     }, preloadDelay);
   });

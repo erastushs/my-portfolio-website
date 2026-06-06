@@ -39,11 +39,11 @@
 
 ## Phase 6: Accessibility
 
-- Restore focus indicators.
-- Improve keyboard navigation.
-- Add ARIA attributes and accessible labels.
-- Improve image alt text and color contrast.
-- Support reduced motion preferences.
+- [x] Restore focus indicators.
+- [x] Improve keyboard navigation.
+- [x] Add ARIA attributes and accessible labels.
+- [x] Improve image alt text and color contrast.
+- [x] Support reduced motion preferences.
 
 ## Phase 7: Performance
 

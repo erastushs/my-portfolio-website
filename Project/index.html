@@ -24,10 +24,12 @@
     <link id="favicon" rel="shortcut icon" href="../assets/img/foto/logo.png" type="image/x-png" />
   </head>
   <body class="project-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!--?======================== Navbar start ========================= -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
       <a href="/" class="logo">
-        <img src="/assets/img/foto/logo.png" alt="logo" style="width: 40px; height: 40px" />
+        <img src="/assets/img/foto/logo.png" alt="Erastus HS logo" style="width: 40px; height: 40px" />
         <h4>Erastus HS</h4>
       </a>
       <ul>
@@ -38,7 +40,7 @@
       </ul>
 
       <div class="menu-toggle">
-        <input type="checkbox" />
+        <input type="checkbox" aria-label="Toggle menu" aria-expanded="false" />
         <span></span>
         <span></span>
         <span></span>
@@ -46,6 +48,7 @@
     </nav>
     <!--?======================== Navbar end ========================= -->
 
+    <main id="main-content">
     <!--?======================== Project start ========================= -->
     <section class="project" id="project">
       <h2 class="heading"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#laptop-code"/></svg> Project Made</h2>
@@ -60,6 +63,7 @@
       </div>
     </section>
     <!--?======================== Project end ========================= -->
+    </main>
 
     <!--?======================== Scroll Up ========================= -->
     <a href="#home" aria-label="ScrollTop" class="scroll-top" id="scroll-top"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#arrow-up"/></svg></a>
