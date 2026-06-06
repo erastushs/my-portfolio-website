@@ -32,10 +32,10 @@
 
 ## Phase 5: Content Refresh
 
-- Improve hero copy and About section.
-- Update skills and technologies.
-- Refresh CV and call-to-action buttons.
-- Review public contact information.
+- [x] Improve hero copy and About section.
+- [x] Update skills and technologies.
+- [x] Refresh CV and call-to-action buttons.
+- [x] Review public contact information.
 
 ## Phase 6: Accessibility
 

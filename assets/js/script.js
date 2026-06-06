@@ -178,7 +178,7 @@ document.querySelectorAll('a[href*="#"]').forEach((anchor) => {
 (function () {
   let dataTyping = {
     target: "typing-text",
-    text: '["frontend development", "web development"]',
+    text: '["frontend development", "Next.js", "TypeScript", "web development"]',
     delay: "1000",
   };
 
