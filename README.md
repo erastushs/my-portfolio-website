@@ -44,9 +44,9 @@ Personal portfolio website for **Erastus Hendro Setiono**, a front-end developer
 │   └── index.html             All projects page
 ├── assets/
 │   ├── css/
-│   │   └── style.css          Complete stylesheet (965 lines)
+│   │   └── style.css          Complete stylesheet (929 lines)
 │   ├── js/
-│   │   └── script.js          All interactivity (311 lines)
+│   │   └── script.js          All interactivity (318 lines)
 │   ├── icons.svg              SVG icon sprite
 │   ├── Resume-*.pdf           Downloadable CV
 │   └── img/
@@ -115,7 +115,7 @@ To deploy, upload all files to any static hosting (Netlify, Vercel, GitHub Pages
 -   All images served as WebP with explicit `width`/`height` (zero CLS)
 -   `loading="lazy"` + `decoding="async"` on below-fold images
 -   `fetchpriority="high"` on hero image
--   Single CSS file (965 lines), single JS file (311 lines)
+-   Single CSS file (929 lines), single JS file (318 lines)
 -   No external fonts beyond Google Fonts (Outfit, with `preconnect`)
 -   No frameworks, no JavaScript dependencies
 

@@ -1,19 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#202020" />
-    <meta name="keywords" content="ErastusHS, Erastus_HS, Erastus, frontend developer, web developer, Next.js, TypeScript, portfolio" />
-    <meta name="author" content="Erastus H.S" />
+    <meta name="theme-color" content="#0f1115" />
+    <meta name="keywords" content="ErastusHS, Erastus, frontend developer, web developer, Next.js, TypeScript, portfolio" />
+    <meta name="author" content="Erastus HS" />
     <meta name="description" content="Erastus Hendro Setiono — Front-end developer in Indonesia. Building modern, performant web apps with Next.js, TypeScript, and Tailwind CSS." />
-    <title>Erastus HS — Front-End Developer Portfolio</title>
 
-    <!-- Open Graph / Facebook -->
+    <title>Erastus HS — Front-End Developer</title>
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://erastushs.netlify.app/" />
-    <meta property="og:title" content="Erastus HS — Front-End Developer Portfolio" />
+    <meta property="og:title" content="Erastus HS — Front-End Developer" />
     <meta property="og:description" content="Erastus Hendro Setiono — Front-end developer in Indonesia. Building modern, performant web apps with Next.js, TypeScript, and Tailwind CSS." />
     <meta property="og:image" content="https://erastushs.netlify.app/assets/img/foto/logo.png" />
     <meta property="og:image:width" content="512" />
@@ -24,244 +25,315 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:url" content="https://erastushs.netlify.app/" />
-    <meta name="twitter:title" content="Erastus HS — Front-End Developer Portfolio" />
+    <meta name="twitter:title" content="Erastus HS — Front-End Developer" />
     <meta name="twitter:description" content="Erastus Hendro Setiono — Front-end developer in Indonesia. Building modern, performant web apps with Next.js, TypeScript, and Tailwind CSS." />
     <meta name="twitter:image" content="https://erastushs.netlify.app/assets/img/foto/logo.png" />
 
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://erastushs.netlify.app/" />
 
-    <!--? font -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <!--? Local SVG icons (replaces Font Awesome CDN) -->
-
-    <!--? Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
-
-    <!--? Favicon -->
-    <link id="favicon" rel="shortcut icon" href="assets/img/foto/logo.png" type="image/png" />
+    <link rel="icon" href="assets/img/foto/logo.png" type="image/png" sizes="512x512" />
   </head>
-  <body class="hidden">
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!--?======================== Preloader start ========================= -->
-    <div class="preloader" id="preloader" role="alert" aria-label="Loading">
-      <div class="loading">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="5.997cm"
-          height="3.492cm"
-        >
-          <image
-            x="0px"
-            y="0px"
-            width="170px"
-            height="99px"
-            href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAABjCAMAAAA8T2vMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACmlBMVEUAd/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/8Ad/////9GjV3OAAAA3HRSTlMACBwtP1p1jKO4wM3W293ezL+3oItyWD0rGQcBGzdgjrvc8vz78NmJMxcKWZjO8e3JkVMnBipinvmXWyQDOXjD9XE0e/7Ecyx0wmkUQezkljVevLRRDm7PxmEJ32fSXFTQSbqsE4r68wtWopDh/dRDDcWwfGpLMCkoLkBOdtPufgTmwZU6HoCz4iXohBEPaOBSBUIVfRi99nk4y6sM17WP5yBH6x9d+KY+AoM8yGZP6SOo6thfVe96HaS59EUv0bI7ho2FIq0QY20Sx3CUqpqnvspXr6GxUBrjbEwWsFzSqgAAAAFiS0dE3XBnsyEAAAAHdElNRQfmBxUSHiVZybUEAAAE1UlEQVR42tWb/V8URRjAjxIwRZIzCDk47/B4CQUJjo4uyPBQCo3OinzBlxLBlECOKDJFsCI0jBI00RILISGzrhTf8AWsjF7svexl/5h2b+/wOGZ3n92dnbn7/rrPPPv9zM1nZ+aZOZ1OA8LuuHNaeETk9LtmzIyaFX139Kyo2TH6OffExt0bPzdBixcqwZCYZJxnMifPZ9BYUlL1aeHp91HWzIhfsDAzi4GwKPv+nFwrJc+8B2xmC0jTR37Ug/aHSGsWFD68OF+Wpo9HTEXpBEWXOGYq0vRSvHRZCRHPxEcfK1Yjyg8FU+lyrUVX2B5X7clT9oRTQ0/ryicxeXqwPPW0QRvR8mdW4RT1sHrNWg1EIyqwi3JErcM8mSWUmjUR5Vi/AeMwMGx8VjNRjqXP4TJdsklTUY7KPByim6uqNTdlmC2O51WbbtVukE4mU+UoSNxGSJSjZrMK05wXFLyx2FKdX12rxLVuu1LR+hrwS5KjXQ22eS82hr80Lenl+KZXmnY4X91p3BU5R9+8W4ZrbUurIlPnbEj2Pa+9XrTxjbYMoSwFcwvtb7bvhcrG7FNgakyRSvvWpg67cz8o2duFndveAbmWvStX9IDEj19WWdTVLS9ledfBbMByvNYhL+2h90SSHXb1HIF1ZiCGvNij0rLvfyAjZckxwTzJvUZV26MC5/EPpVyzPwKn6zshkCNFv7JfjSdP9xqXhGu0E5hq4GN0gsxdGDx5treL73Wz+kBpSpGNd58cHMIlypHUMF/M9XAcIEcE8hf5pA2np4dTJtGO7ZFM4EC0+vR0PXZRjs+yxVxrJFr3TG3iCi/QRJTFuuxzEdcB0baxU+KP2rEO0UDcXwirfilWKugMjD5zVvOK2LDwhNsp3CouYL1/7ryySUkeFy4KqV4SbDM4Mjlyei4BUY5GgZVRqlCD+MlDvPkyIVGWK1eRqnsFwvfX+UdZOsrJmbIvP4lSNaODh675B60aJSnKYmhBqLrQsWN+IbXXiXYpz9ktU1RbkIE5/kNkJ3lRlhWB67l8NyrM7bdZM+Gf7mGkB3xhx1BBCYtvB3zVSslUp8tNnfRVRZYI0yaeZw3IzY+Try/dNv3mBipicGLpWHGKpinLt95yc9048vF3E/3+PbZlvmKsXT9EXo/tC0M//dFn2q6maESCUV996aYGdXmsZKz3mtponYCCOe81/Umjgxl8tHkXYLagN9Xd5E1/PkBbRJJB/rxUH/TjVKf7xWP6K4mNiUp+4+co+l9+SayeaSylkLYHgK2eTt1AWwOA1VPtlyq4BAXDnGlMK20NAENcRXYR8Ss6ShjlOhVSx6TP76zpH7QlQOyzsJvTQ7QtQHA7/2HaEiDCKhjmT9oSMP5it6dNtCVg9DJMB20HGLeymL9DYD3F8Q/DNNJ2AKJnjoXAcpqjf4Qx0nYAMs6YM9RnIUKD2ElLULH83Ikb6rMQ4V+mirYClDHmCm0FIIbmGbQVoLgZqsVpOSwYkXnxiB7He2kbgFl9mrYBlO6rt2grQDlSSdsAjP0gbQMwji7aBmCqaP+lDEx9mqaXfHDiHlefgxA7FN++Jq8aEsU/XjXYj1L9VNX/B4MUJa20DcD0B/8ZpY//aAvACZW9KkuY+hSkCJFaFUfwn6eHoqpmt7yx8z+ECzGqLlYmwwAAAABJRU5ErkJggg=="
-          />
-        </svg>
-      </div>
-    </div>
-    <!--?======================== Preloader end ========================= -->
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="navbar-inner">
+        <a href="#home" class="nav-logo" aria-label="Erastus HS Home">
+          <img src="assets/img/foto/logo.png" alt="" width="40" height="40" />
+          <span>Erastus HS</span>
+        </a>
 
-    <!--?======================== Navbar start ========================= -->
-    <nav class="navbar" aria-label="Main navigation">
-      <a href="/" class="logo">
-        <img src="assets/img/foto/logo.png" alt="Erastus HS logo" width="80" height="80" style="width: 40px; height: 40px" />
-        <span class="logo-text">Erastus HS</span>
-      </a>
-      <ul>
-        <li><a class="active" href="#home" aria-current="page">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#project">Project</a></li>
-      </ul>
+        <nav aria-label="Main navigation">
+          <ul class="nav-links" id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
 
-      <div class="menu-toggle">
-        <input type="checkbox" aria-label="Toggle menu" aria-expanded="false" />
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-    <!--?======================== Navbar end ========================= -->
-
-    <main id="main-content">
-    <!--?======================== Home start ========================= -->
-    <section class="home" id="home">
-      <div class="foto">
-      <img src="assets/img/foto/foto.webp" alt="Portrait of Erastus H.S."
-        width="512" height="512" fetchpriority="high" />
-      </div>
-      <div class="content">
-        <h1>
-          Hello, I'm<br />
-          Erastus HS
-        </h1>
-        <p>I'm into <span class="typing-text"></span><span>|</span></p>
-        <div class="btns">
-          <a href="mailto:erastushs@gmail.com" class="btn">Email Me</a>
-          <a
-            href="assets/Resume-Erastus-Hendro-Setiono.pdf"
-            class="btn cv"
-            >Download CV</a>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="icon icon-sun" aria-hidden="true"><use href="assets/icons.svg#sun"/></svg>
+            <svg class="icon icon-moon" aria-hidden="true"><use href="assets/icons.svg#moon"/></svg>
+          </button>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
-    </section>
-    <!--?======================== Home end ========================= -->
+    </header>
 
-    <!--?======================== About start ========================= -->
-    <section class="about" id="about">
-      <h2 class="heading"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#user"/></svg> About Me</h2>
-      <div class="about-me">
-        <div class="foto">
-          <img src="/assets/img/foto/hero.webp" alt="Portrait of Erastus H.S."
-            width="1125" height="854" loading="lazy" decoding="async" />
-        </div>
-        <div class="about-desc">
-          <p>
-            Hi, I'm Erastus Hendro Setiono — a front-end developer based in Indonesia. I build modern,
-            performant web applications with Next.js, TypeScript, and Tailwind CSS. I'm passionate about
-            clean code, intuitive interfaces, and turning ideas into polished digital experiences.
-          </p>
-          <a
-            href="assets/Resume-Erastus-Hendro-Setiono.pdf"
-            class="cv icon-hover"
-            >Download CV <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#download"/></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!--?======================== About end ========================= -->
-
-    <!--?======================== Skills start ========================= -->
-    <section class="skills" id="skills">
-      <h2 class="heading"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#laptop-code"/></svg> My Skills</h2>
-          <div class="container">
-        <div class="row" id="skillsContainer">
-          <div class="bar">
-            <div class="info">
-              <img src="/assets/img/logo/html.png" alt="html" width="512" height="512" loading="lazy" decoding="async" />
-              <span>HTML5</span>
-            </div>
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" id="home">
+        <div class="hero-grid">
+          <div class="hero-image">
+            <img src="assets/img/foto/foto.webp" alt="Portrait of Erastus HS" width="512" height="512" fetchpriority="high" />
           </div>
-          <div class="bar">
-            <div class="info">
-              <img src="/assets/img/logo/css.png" alt="css" width="512" height="512" loading="lazy" decoding="async" />
-              <span>CSS3</span>
-            </div>
-          </div>
-          <div class="bar">
-            <div class="info">
-              <img src="/assets/img/logo/js.png" alt="javascript" width="512" height="512" loading="lazy" decoding="async" />
-              <span>JavaScript</span>
-            </div>
-          </div>
-          <div class="bar">
-            <div class="info">
-              <img src="/assets/img/logo/typescript.png" alt="typescript" width="1280" height="1280" loading="lazy" decoding="async" />
-              <span>TypeScript</span>
-            </div>
-          </div>
-          <div class="bar">
-            <div class="info">
-              <img src="/assets/img/logo/nextjs.png" alt="nextjs" width="225" height="225" loading="lazy" decoding="async" />
-              <span>Next.js</span>
-            </div>
-          </div>
-          <div class="bar">
-            <div class="info">
-              <img src="/assets/img/logo/tailwind.png" alt="tailwind" width="512" height="512" loading="lazy" decoding="async" />
-              <span>Tailwind</span>
-            </div>
-          </div>
-          <div class="bar">
-            <div class="info">
-              <img src="/assets/img/logo/nodejs.png" alt="nodejs" width="512" height="512" loading="lazy" decoding="async" />
-              <span>Node.js</span>
-            </div>
-          </div>
-          <div class="bar">
-            <div class="info">
-              <img src="/assets/img/logo/github.png" alt="github" width="512" height="512" loading="lazy" decoding="async" />
-              <span>GitHub</span>
+          <div class="hero-content">
+            <p class="hero-overline">Front-End Developer</p>
+            <h1>Erastus HS</h1>
+            <p class="hero-tagline">I build fast, modern and user-focused web experiences with performance and simplicity in mind.</p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">
+                View Projects
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow-down"/></svg>
+              </a>
+              <a href="mailto:erastushs@gmail.com" class="btn btn-secondary">Contact Me</a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!--?======================== Skills end ========================= -->
+      </section>
 
-    <!--?======================== Project start ========================= -->
-    <section class="project" id="project">
-      <h2 class="heading"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#laptop-code"/></svg> Project Made</h2>
-      <div class="box-container" id="projectContainer" data-icon-path="assets/icons.svg" data-show-all="false">
-      </div>
-
-      <div class="viewall">
-        <h2>Interested working with me?</h2>
-        <div class="actions">
-          <a href="/Project" class="btn more icon-hover"
-              ><span>See more projects</span>
-            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow-right"/></svg>
-          </a>
-          <a href="mailto:erastushs@gmail.com" class="btn email icon-hover"
-            ><span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#envelope"/></svg>Email Me</span>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!--?======================== Project end ========================= -->
-
-    <!--?======================== Footer start ========================= -->
-    <footer class="footer">
-      <div class="box-container">
-        <div class="box">
-          <h3>Erastus's Portfolio</h3>
-          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br /></p>
-        </div>
-
-        <div class="box right">
-          <h3>contact info</h3>
-          <p><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#envelope"/></svg>erastushs@gmail.com</p>
-          <p><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#map-marker"/></svg>Sentani, Jayapura. Indonesia</p>
-          <div class="share">
-            <a href="https://github.com/erastushs" class="share-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#github"/></svg></a>
-            <a href="mailto:erastushs@gmail.com" class="share-icon" aria-label="Mail"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#envelope"/></svg></a>
-            <a
-              href="https://instagram.com/erastus_hs"
-              class="share-icon" aria-label="instagram"
-              target="_blank" rel="noopener noreferrer"
-            ><svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#instagram"/></svg></a>
-            <a
-              href="https://www.linkedin.com/in/erastushs/"
-              class="share-icon" aria-label="linkedin"
-              target="_blank" rel="noopener noreferrer"
-            ><svg class="icon icon-brand" aria-hidden="true"><use href="assets/icons.svg#linkedin"/></svg></a>
+      <!-- About -->
+      <section class="about section reveal" id="about">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-grid">
+            <div class="about-image">
+              <img src="assets/img/foto/hero.webp" alt="Erastus HS" width="1125" height="854" loading="lazy" decoding="async" />
+            </div>
+            <div class="about-text">
+              <p>Hi, I'm <strong>Erastus Hendro Setiono</strong> — a front-end developer based in Indonesia. I build modern, performant web applications with Next.js, TypeScript, and Tailwind CSS.</p>
+              <p>I'm passionate about clean code, intuitive interfaces, and turning ideas into polished digital experiences. I believe in writing software that is fast, accessible, and delightful to use.</p>
+              <a href="assets/Resume-Erastus-Hendro-Setiono.pdf" class="btn btn-outline" download>
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#download"/></svg>
+                Download CV
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <p class="credit">
-        Made with <svg class="icon icon-heart pulse" aria-hidden="true"><use href="assets/icons.svg#heart"/></svg> by <a href="https://github.com/erastushs"> Erastus H.S</a>
-      </p>
-    </footer>
-    <!--?======================== Footer end ========================= -->
+      <!-- Skills -->
+      <section class="skills section reveal" id="skills">
+        <div class="container">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h3>Frontend</h3>
+              <div class="skill-badges">
+                <span class="skill-badge">HTML</span>
+                <span class="skill-badge">CSS</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">TypeScript</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3>Framework</h3>
+              <div class="skill-badges">
+                <span class="skill-badge">Next.js</span>
+                <span class="skill-badge">Tailwind CSS</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3>Backend</h3>
+              <div class="skill-badges">
+                <span class="skill-badge">Node.js</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3>Tools</h3>
+              <div class="skill-badges">
+                <span class="skill-badge">Git</span>
+                <span class="skill-badge">GitHub</span>
+                <span class="skill-badge">VS Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="projects section" id="projects">
+        <div class="container">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects-grid reveal-stagger">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="assets/img/Project/luxyhub.webp" alt="LuxyHub Roblox scripts platform" width="1918" height="895" loading="lazy" decoding="async" />
+              </div>
+              <div class="project-body">
+                <h3>LuxyHub</h3>
+                <p>Your ultimate destination for Roblox scripts, game tools, and community resources.</p>
+                <div class="project-tags">
+                  <span class="tag">Next.js</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Tailwind</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://luxyhub.space" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg>
+                    Live Demo
+                  </a>
+                  <a href="https://github.com/erastushs/luxy-hub" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#code"/></svg>
+                    Source
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-img">
+                <img src="assets/img/Project/bloxatlas.webp" alt="BloxAtlas Roblox data explorer" width="1918" height="895" loading="lazy" decoding="async" />
+              </div>
+              <div class="project-body">
+                <h3>BloxAtlas</h3>
+                <p>Explore Roblox Through Data</p>
+                <div class="project-tags">
+                  <span class="tag">Next.js</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Tailwind</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://bloxatlas.vercel.app" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg>
+                    Live Demo
+                  </a>
+                  <a href="https://github.com/erastushs/bloxatlas" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#code"/></svg>
+                    Source
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-img">
+                <img src="assets/img/Project/website-juice.webp" alt="Juice You website homepage" width="1920" height="1080" loading="lazy" decoding="async" />
+              </div>
+              <div class="project-body">
+                <h3>Website Juice You</h3>
+                <p>Simple responsive website built as a submission project.</p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://juiceyoubeta.netlify.app/" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg>
+                    Live Demo
+                  </a>
+                  <a href="https://github.com/erastushs/website-juice" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#code"/></svg>
+                    Source
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-img">
+                <img src="assets/img/Project/my-bookshelfs.webp" alt="My Bookshelfs catalog app" width="1920" height="931" loading="lazy" decoding="async" />
+              </div>
+              <div class="project-body">
+                <h3>My Bookshelfs</h3>
+                <p>Catalog and organize your book collection on multiple virtual bookshelves.</p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://my-bookshelfs.netlify.app/" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#eye"/></svg>
+                    Live Demo
+                  </a>
+                  <a href="https://github.com/erastushs/My-bookshelf" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#code"/></svg>
+                    Source
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects-cta">
+            <a href="Project/" class="btn btn-primary">
+              See More Projects
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow-right"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact section reveal" id="contact">
+        <div class="container">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="contact-subtitle">Interested in working together? Reach out through any of these channels.</p>
+          <div class="contact-grid">
+            <a href="mailto:erastushs@gmail.com" class="contact-card">
+              <div class="contact-icon">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#envelope"/></svg>
+              </div>
+              <h3>Email</h3>
+              <p>erastushs@gmail.com</p>
+            </a>
+            <a href="https://github.com/erastushs" class="contact-card" target="_blank" rel="noopener noreferrer">
+              <div class="contact-icon">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#github"/></svg>
+              </div>
+              <h3>GitHub</h3>
+              <p>github.com/erastushs</p>
+            </a>
+            <a href="https://www.linkedin.com/in/erastushs/" class="contact-card" target="_blank" rel="noopener noreferrer">
+              <div class="contact-icon">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#linkedin"/></svg>
+              </div>
+              <h3>LinkedIn</h3>
+              <p>linkedin.com/in/erastushs</p>
+            </a>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#map-marker"/></svg>
+              </div>
+              <h3>Location</h3>
+              <p>Sentani, Jayapura · Indonesia</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!--?======================== Scroll Up ========================= -->
-    <a href="#home" aria-label="ScrollTop" class="scroll-top" id="scroll-top"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow-up"/></svg></a>
-    <!--?======================== Scroll Up ========================= -->
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href="https://github.com/erastushs" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#github"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/erastushs/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#linkedin"/></svg>
+          </a>
+          <a href="https://instagram.com/erastus_hs" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#instagram"/></svg>
+          </a>
+          <a href="mailto:erastushs@gmail.com" aria-label="Email">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#envelope"/></svg>
+          </a>
+        </div>
+        <p class="footer-text">© 2026 Erastus HS — Built with vanilla HTML, CSS & JavaScript.</p>
+      </div>
+    </footer>
 
-    <!-- jQuery removed (replaced with native JS) -->
+    <!-- Scroll Top -->
+    <a href="#home" class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow-up"/></svg>
+    </a>
 
-    <!--? Main JavaScript -->
     <script src="assets/js/script.js"></script>
   </body>
 </html>
